@@ -9,15 +9,12 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor: 0
-  components: 0
   config: 0
-  config_filter: 0
   config_translation: 0
   contact: 0
   content_moderation: 0
   content_translation: 0
   ctools: 0
-  date_popup: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -39,14 +36,11 @@ module:
   help: 0
   history: 0
   image: 0
-  inline_entity_form: 0
   inline_form_errors: 0
   language: 0
   libraries: 0
   link: 0
-  linkit: 0
   locale: 0
-  mailsystem: 0
   media: 0
   menu_block: 0
   menu_ui: 0
@@ -55,20 +49,14 @@ module:
   options: 0
   paragraphs: 0
   path: 0
-  plupload: 0
-  queue_ui: 0
-  quickedit: 0
   rdf: 0
   recaptcha: 0
   redirect: 0
   rest: 0
-  rrssb: 0
   scheduler: 0
   serialization: 0
   shortcut: 0
   simple_sitemap: 0
-  single_datetime: 0
-  smtp: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -81,18 +69,13 @@ module:
   user: 0
   video_embed_field: 0
   video_embed_media: 0
-  views_autocomplete_filters: 0
-  views_data_export: 0
   views_ui: 0
-  viewsreference: 0
   webform: 0
   webform_ui: 0
   workflows: 0
-  youtube: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
-  standard: 1000
 theme:
   stable: 0
   classy: 0
@@ -100,6 +83,7 @@ theme:
   seven: 0
   zen: 0
   if_zen: 0
+  stark: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
-profile: standard
+profile: minimal
