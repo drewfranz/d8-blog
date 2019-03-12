@@ -2,6 +2,7 @@
 
 namespace Drupal\Tests\node\Functional\Rest;
 
+use Drupal\Core\Language\Language;
 use Drupal\node\Entity\Node;
 use Drupal\node\Entity\NodeType;
 use Drupal\Tests\rest\Functional\BcTimestampNormalizerUnixTestTrait;
@@ -178,7 +179,7 @@ abstract class NodeResourceTestBase extends EntityResourceTestBase {
         [
           'alias' => '/llama',
           'pid' => 1,
-          'langcode' => 'en',
+          'langcode' => Language::LANGCODE_NOT_SPECIFIED,
         ],
       ],
     ];

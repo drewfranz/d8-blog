@@ -60,9 +60,6 @@
         "wikimedia/composer-merge-plugin": "^1.4",
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
-    "replace": {
-        "drupal/core": "^8.6"
-    },
     "require-dev": {
         "webflo/drupal-core-require-dev": "^8.6.0"
     },
@@ -80,10 +77,7 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"],
-        "psr-4": {
-            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
-        }
+        "files": ["load.environment.php"]
     },
     "scripts": {
         "pre-install-cmd": [
