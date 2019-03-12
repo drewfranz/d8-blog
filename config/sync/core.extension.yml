@@ -23,8 +23,6 @@ module:
   editor: 0
   embed: 0
   entity: 0
-  entity_browser: 0
-  entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
   field: 0
@@ -84,6 +82,3 @@ theme:
   zen: 0
   if_zen: 0
   stark: 0
-_core:
-  default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
-profile: minimal
