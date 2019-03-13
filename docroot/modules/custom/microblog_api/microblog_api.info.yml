@@ -1,5 +1,5 @@
 name: Micro.blog API
 type: module
 description: Provides abaility to interact with the micro.blog API
-# core: 8.x
+core: 8.x
 configure: microblog_api.general_settings_form
