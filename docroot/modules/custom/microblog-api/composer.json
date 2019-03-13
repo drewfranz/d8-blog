@@ -1,0 +1,6 @@
+{
+  "name": "drupal/microblog-api",
+  "type": "drupal-module",
+  "description": "Provides functionality for interacting with the Micro.blog API",
+  "license": "GPL-2.0+"
+}

@@ -5,3 +5,4 @@ description: Provides abaility to interact with the micro.blog API
 package: Custom
 dependencies:
   - drupal:system (>=8.5.11)
+configure: microblog_api.general_settings_form
