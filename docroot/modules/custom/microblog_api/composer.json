@@ -1,5 +1,5 @@
 {
-  "name": "drupal/microblog-api",
+  "name": "drupal/microblog_api",
   "type": "drupal-module",
   "description": "Provides functionality for interacting with the Micro.blog API",
   "license": "GPL-2.0+"
