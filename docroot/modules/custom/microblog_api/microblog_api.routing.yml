@@ -1,0 +1,7 @@
+microblog_api.general_settings_form:
+  path: /admin/config/user-interface/microblog-api
+  defaults:
+    _title: 'Micro.blog API'
+    _form: \Drupal\microblog_api\Form\MicroblogApiGeneralSettingsForm
+  requirements:
+    _permission: 'administer microblog api'
