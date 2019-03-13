@@ -32,7 +32,7 @@ class DateRangeFieldTest extends DateTestBase {
    *
    * @var array
    */
-  protected $defaultSettings = ['timezone_override' => '', 'separator' => '-'];
+  protected $defaultSettings = ['timezone_override' => '', 'separator' => '-', 'fromto' => 'both'];
 
   /**
    * {@inheritdoc}
@@ -1376,6 +1376,148 @@ class DateRangeFieldTest extends DateTestBase {
     $result = $this->xpath("//*[@id='edit-settings-datetime-type' and contains(@disabled, 'disabled')]");
     $this->assertEqual(count($result), 1, "Changing datetime setting is disabled.");
     $this->assertText('There is data for this field in the database. The field settings can no longer be changed.');
+  }
+
+  /**
+   * Tests displaying dates with the 'fromto' setting.
+   *
+   * @dataProvider fromtoSettingDataProvider
+   */
+  public function testFromtoSetting(array $expected, $datetime_type, $field_formatter_type, array $display_settings = []) {
+    $field_name = $this->fieldStorage->getName();
+
+    // Create a test content type.
+    $this->drupalCreateContentType(['type' => 'date_content']);
+
+    // Ensure the field to a datetime field.
+    $this->fieldStorage->setSetting('datetime_type', $datetime_type);
+    $this->fieldStorage->save();
+
+    // Build up dates in the UTC timezone.
+    $value = '2012-12-31 00:00:00';
+    $start_date = new DrupalDateTime($value, 'UTC');
+    $end_value = '2013-06-06 00:00:00';
+    $end_date = new DrupalDateTime($end_value, 'UTC');
+
+    // Update the timezone to the system default.
+    $start_date->setTimezone(timezone_open(drupal_get_user_timezone()));
+    $end_date->setTimezone(timezone_open(drupal_get_user_timezone()));
+
+    // Submit a valid date and ensure it is accepted.
+    $date_format = DateFormat::load('html_date')->getPattern();
+
+    $edit = [
+      "{$field_name}[0][value][date]" => $start_date->format($date_format),
+      "{$field_name}[0][end_value][date]" => $end_date->format($date_format),
+    ];
+
+    // Supply time as well when field is a datetime field.
+    if ($datetime_type == DateRangeItem::DATETIME_TYPE_DATETIME) {
+      $time_format = DateFormat::load('html_time')->getPattern();
+      $edit["{$field_name}[0][value][time]"] = $start_date->format($time_format);
+      $edit["{$field_name}[0][end_value][time]"] = $end_date->format($time_format);
+    }
+
+    $this->drupalPostForm('entity_test/add', $edit, t('Save'));
+    preg_match('|entity_test/manage/(\d+)|', $this->getUrl(), $match);
+    $id = $match[1];
+    $this->assertText(t('entity_test @id has been created.', ['@id' => $id]));
+
+    // Now set display options.
+    $this->displayOptions = [
+      'type' => $field_formatter_type,
+      'label' => 'hidden',
+      'settings' => $display_settings + [
+        'format_type' => 'short',
+        'separator' => 'THESEPARATOR',
+      ] + $this->defaultSettings,
+    ];
+
+    entity_get_display($this->field->getTargetEntityTypeId(), $this->field->getTargetBundle(), 'full')
+      ->setComponent($field_name, $this->displayOptions)
+      ->save();
+
+    $output = $this->renderTestEntity($id);
+    foreach ($expected as $content => $is_expected) {
+      if ($is_expected) {
+        $this->assertContains($content, $output);
+      }
+      else {
+        $this->assertNotContains($content, $output);
+      }
+    }
+  }
+
+  /**
+   * The data provider for testing the 'fromto' setting.
+   *
+   * @return array
+   *   An array of different date settings to test the behavior of the 'fromto' setting.
+   */
+  public function fromtoSettingDataProvider() {
+    $field_formatters = [
+      'daterange_default' => [
+        'start_date' => '12/31/2012',
+        'separator' => ' THESEPARATOR ',
+        'end_date' => '06/06/2013',
+      ],
+      'daterange_plain' => [
+        'start_date' => '2012-12-31',
+        'separator' => ' THESEPARATOR ',
+        'end_date' => '2013-06-06',
+      ],
+      'daterange_custom' => [
+        'start_date' => '2012-12-31',
+        'separator' => ' THESEPARATOR ',
+        'end_date' => '2013-06-06',
+      ],
+    ];
+    $datetime_types = [
+      DateRangeItem::DATETIME_TYPE_DATE,
+      DateRangeItem::DATETIME_TYPE_DATETIME,
+    ];
+
+    $return = [];
+    foreach ($datetime_types as $datetime_type) {
+      foreach ($field_formatters as $field_formatter_type => $dates) {
+        // Both start and end date.
+        $return[$datetime_type . '-' . $field_formatter_type . '-both'] = [
+          'expected' => [
+            $dates['start_date'] => TRUE,
+            $dates['separator'] => TRUE,
+            $dates['end_date'] => TRUE,
+          ],
+          'datetime_type' => $datetime_type,
+          'field_formatter_type' => $field_formatter_type,
+        ];
+
+        // Only start date.
+        $return[$datetime_type . '-' . $field_formatter_type . '-start_date'] = [
+          'expected' => [
+            $dates['start_date'] => TRUE,
+            $dates['separator'] => FALSE,
+            $dates['end_date'] => FALSE,
+          ],
+          'datetime_type' => $datetime_type,
+          'field_formatter_type' => $field_formatter_type,
+          ['fromto' => 'start_date'],
+        ];
+
+        // Only end date.
+        $return[$datetime_type . '-' . $field_formatter_type . '-end_date'] = [
+          'expected' => [
+            $dates['start_date'] => FALSE,
+            $dates['separator'] => FALSE,
+            $dates['end_date'] => TRUE,
+          ],
+          'datetime_type' => $datetime_type,
+          'field_formatter_type' => $field_formatter_type,
+          ['fromto' => 'end_date'],
+        ];
+      }
+    }
+
+    return $return;
   }
 
 }
