@@ -3,6 +3,7 @@
 namespace Drupal\Tests\taxonomy\Functional\Rest;
 
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Language\Language;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\taxonomy\Entity\Vocabulary;
 use Drupal\Tests\rest\Functional\BcTimestampNormalizerUnixTestTrait;
@@ -197,7 +198,7 @@ abstract class TermResourceTestBase extends EntityResourceTestBase {
         [
           'alias' => '/llama',
           'pid' => 1,
-          'langcode' => 'en',
+          'langcode' => Language::LANGCODE_NOT_SPECIFIED,
         ],
       ],
       'status' => [

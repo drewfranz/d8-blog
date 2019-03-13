@@ -22,8 +22,10 @@
         "doctrine/annotations": "^1.4",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/admin_toolbar": "^1.23",
+        "drupal/adminimal_theme": "^1.4",
         "drupal/better_exposed_filters": "3.0-alpha4",
         "drupal/block_field": "^1.0@alpha",
+        "drupal/components": "^1.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6.0",
         "drupal/easy_breadcrumb": "^1.8",
@@ -53,15 +55,12 @@
         "drupal/video_embed_field": "2.0",
         "drupal/webform": "^5.0@RC",
         "drupal/zen": "^7.0@alpha",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^9.5",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "wikimedia/composer-merge-plugin": "^1.4",
         "zaporylie/composer-drupal-optimizations": "^1.0"
-    },
-    "replace": {
-        "drupal/core": "^8.6"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "^8.6.0"
@@ -80,10 +79,7 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"],
-        "psr-4": {
-            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
-        }
+        "files": ["load.environment.php"]
     },
     "scripts": {
         "pre-install-cmd": [

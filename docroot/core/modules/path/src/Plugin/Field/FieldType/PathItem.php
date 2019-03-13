@@ -6,6 +6,7 @@ use Drupal\Component\Utility\Random;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Field\FieldItemBase;
+use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\TypedData\DataDefinition;
 
 /**
@@ -68,9 +69,14 @@ class PathItem extends FieldItemBase {
     // unspecified even if the field/entity has a specific langcode.
     $alias_langcode = ($this->langcode && $this->pid) ? $this->langcode : $this->getLangcode();
 
+    $entity = $this->getEntity();
+    // If either entity or the path field is non-translatable, use 'und'.
+    if (!$entity->isTranslatable() || !$this->getFieldDefinition()->isTranslatable()) {
+      $alias_langcode = LanguageInterface::LANGCODE_NOT_SPECIFIED;
+    }
+
     if (!$update) {
       if ($this->alias) {
-        $entity = $this->getEntity();
         if ($path = \Drupal::service('path.alias_storage')->save('/' . $entity->urlInfo()->getInternalPath(), $this->alias, $alias_langcode)) {
           $this->pid = $path['pid'];
         }
@@ -83,7 +89,6 @@ class PathItem extends FieldItemBase {
       }
       // Only save a non-empty alias.
       elseif ($this->alias) {
-        $entity = $this->getEntity();
         \Drupal::service('path.alias_storage')->save('/' . $entity->urlInfo()->getInternalPath(), $this->alias, $alias_langcode, $this->pid);
       }
     }

@@ -4,6 +4,7 @@ namespace Drupal\path\Plugin\Field\FieldType;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Field\FieldItemList;
+use Drupal\Core\Language\Language;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\TypedData\ComputedItemListTrait;
@@ -21,9 +22,7 @@ class PathFieldItemList extends FieldItemList {
   protected function computeValue() {
     // Default the langcode to the current language if this is a new entity or
     // there is no alias for an existent entity.
-    // @todo Set the langcode to not specified for untranslatable fields
-    //   in https://www.drupal.org/node/2689459.
-    $value = ['langcode' => $this->getLangcode()];
+    $value = ['langcode' => !$this->getFieldDefinition()->isTranslatable() ? Language::LANGCODE_NOT_SPECIFIED : $this->getLangcode()];
 
     $entity = $this->getEntity();
     if (!$entity->isNew()) {
@@ -64,10 +63,22 @@ class PathFieldItemList extends FieldItemList {
   public function delete() {
     // Delete all aliases associated with this entity in the current language.
     $entity = $this->getEntity();
+    $entityTypeId = $entity->getEntityTypeId();
+    $bundleId = $entity->bundle();
     $conditions = [
       'source' => '/' . $entity->toUrl()->getInternalPath(),
       'langcode' => $entity->language()->getId(),
     ];
+    $entity_langcode = $entity->language()->getId();
+    $original_entity_langcode = $entity->getUntranslated()->language()->getId();
+    // If the path field is not translatable  and compare langauge code to check
+    // entity being deleted is a source entity not translated entity then
+    // delete the path alias with the langcode 'und'.
+    if ($entity_langcode == $original_entity_langcode &&
+        \Drupal::config("core.base_field_override" . $entityTypeId . $bundleId . "path")
+          ->get('translatable') === FALSE) {
+      $conditions['langcode'] = LanguageInterface::LANGCODE_NOT_SPECIFIED;
+    }
     \Drupal::service('path.alias_storage')->delete($conditions);
   }
 
