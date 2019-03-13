@@ -5,6 +5,7 @@ namespace Drupal\path\Plugin\Field\FieldWidget;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Language\LanguageInterface;
 use Symfony\Component\Validator\ConstraintViolationInterface;
 
 /**
@@ -44,7 +45,7 @@ class PathWidget extends WidgetBase {
     $element['source'] = [
       '#type' => 'value',
       '#value' => !$entity->isNew() ? '/' . $entity->toUrl()->getInternalPath() : NULL,
-     ];
+    ];
     $element['langcode'] = [
       '#type' => 'value',
       '#value' => $items[$delta]->langcode,

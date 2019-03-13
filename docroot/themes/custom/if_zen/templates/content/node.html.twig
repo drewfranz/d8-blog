@@ -75,7 +75,9 @@
 {% block footer %}
   {% if display_submitted %}
     {{ author_picture }}
-    {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+    {# {% trans %} #}
+    Posted on {{ date }}
+    {# {% endtrans %} #}
     {{ metadata }}
   {% endif %}
   {% if node.in_preview or not node.isPublished() %}
