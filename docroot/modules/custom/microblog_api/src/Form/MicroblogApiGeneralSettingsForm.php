@@ -4,7 +4,6 @@ namespace Drupal\microblog_api\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-//use Drupal\easy_breadcrumb\EasyBreadcrumbConstants;
 
 /**
  * Build Micro.blog API settings form.
