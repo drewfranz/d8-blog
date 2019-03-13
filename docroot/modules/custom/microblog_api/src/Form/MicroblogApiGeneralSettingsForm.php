@@ -43,7 +43,7 @@ class MicroblogApiGeneralSettingsForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Micro.blog Access Token'),
       '#description' => $this->t('Micro.blog doesn’t have normal account passwords, but it does have app tokens, which are like app-specific passwords. You can generate a new token under Account → Edit Apps to use in an app, and that app will have full access to your Micro.blog account.'),
-      '#default_value' => $config->get('access_token')),
+      '#default_value' => $config->get('access_token'),
     ];
     
     $form = [];
