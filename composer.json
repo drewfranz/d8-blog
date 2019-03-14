@@ -39,6 +39,7 @@
         "drupal/jsonapi": "^1.23",
         "drupal/jsonapi_extras": "^2.10",
         "drupal/libraries": "^3.0@alpha",
+        "drupal/markdown": "^1.2",
         "drupal/media_entity": "^1.7",
         "drupal/media_entity_image": "^1.2",
         "drupal/menu_block": "^1.5",
