@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -95,7 +95,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-base-grouping-lists-dl" class="kss-section kss-section--depth-4 is-fullscreen">
@@ -115,7 +116,7 @@
                   <p class="kss-toolbar">
                         <a href="#kssref-base-grouping-lists-dl" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -136,7 +137,7 @@
             </a>
             <a href="#kssref-base-grouping-lists-dl" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -147,6 +148,7 @@
             <p>The <code>&lt;dl&gt;</code> element is a list of terms with their associated descriptions.</p>
 
           </div>
+        
         
               </div>
 
@@ -174,16 +176,16 @@
             <summary>
                               Markup: <code>base/grouping/grouping-dl.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;dl class=&quot;{{modifier_class}}&quot;&gt;
-  &lt;dt&gt;Description lists&lt;/dt&gt;
-  &lt;dd&gt;A description list is perfect for defining terms.&lt;/dd&gt;
-  &lt;dt&gt;Euismod&lt;/dt&gt;
-  &lt;dd&gt;Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.&lt;/dd&gt;
-  &lt;dd&gt;Donec id elit non mi porta gravida at eget metus.&lt;/dd&gt;
-  &lt;dt&gt;Malesuada porta&lt;/dt&gt;
-  &lt;dd&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/dd&gt;
-&lt;/dl&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Description lists<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>A description list is perfect for defining terms.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Euismod<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>Donec id elit non mi porta gravida at eget metus.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Malesuada porta<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>Etiam porta sem malesuada magna mollis euismod.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -191,16 +193,15 @@
         </div>
           </div>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

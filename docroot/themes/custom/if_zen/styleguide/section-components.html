@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -193,7 +193,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-components" class="kss-section kss-section--depth-1 ">
@@ -216,6 +217,7 @@
 class names specified in the component.</p>
 
           </div>
+        
         
               </div>
 
@@ -241,16 +243,16 @@ class names specified in the component.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-box" data-kss-fullscreen="kssref-components-box">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-box.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -261,7 +263,7 @@ class names specified in the component.</p>
               </a>
                         <a href="#kssref-components-box" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -282,7 +284,7 @@ class names specified in the component.</p>
             </a>
             <a href="#kssref-components-box" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -302,6 +304,7 @@ component with <code>@extend %box;</code>.</p>
 building a good component.</p>
 
           </div>
+        
         
               </div>
 
@@ -361,13 +364,13 @@ building a good component.</p>
             <summary>
                               Markup: <code>components/box/box.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box {{modifier_class}}&quot;&gt;
-  &lt;h2 class=&quot;box__title&quot;&gt;{{title}}&lt;/h2&gt;
-  &lt;div class=&quot;box__content&quot;&gt;
-    {{content}}
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box__title"</span>&gt;</span></span><span class="hljs-template-variable">{{title}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box__content"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{content}}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -391,16 +394,16 @@ building a good component.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-clearfix" data-kss-fullscreen="kssref-components-clearfix">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-clearfix.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -411,7 +414,7 @@ building a good component.</p>
               </a>
                         <a href="#kssref-components-clearfix" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -432,7 +435,7 @@ building a good component.</p>
             </a>
             <a href="#kssref-components-clearfix" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -441,9 +444,10 @@ building a good component.</p>
         
                   <div class="kss-description">
             <p>Allows the bottom of an element to extend to the bottom of all floated child
-elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://nicolasgallagher.com/micro-clearfix-hack/</a></p>
+elements. See http://nicolasgallagher.com/micro-clearfix-hack/</p>
 
           </div>
+        
         
               </div>
 
@@ -465,10 +469,10 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             <summary>
                               Markup: <code>components/clearfix/clearfix.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;clearfix&quot;&gt;
-  &lt;div style=&quot;float: left; height: 50px; width: 50%;&quot;&gt;A floated item.&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"clearfix"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"float: left; height: 50px; width: 50%;"</span>&gt;</span>A floated item.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -492,16 +496,16 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
                   <p class="kss-toolbar">
                           <a href="#kssref-components-comments" data-kss-fullscreen="kssref-components-comments">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-comments.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -512,7 +516,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
               </a>
                         <a href="#kssref-components-comments" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -533,7 +537,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             </a>
             <a href="#kssref-components-comments" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -544,6 +548,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             <p>A single comment in a thread of comments.</p>
 
           </div>
+        
         
               </div>
 
@@ -630,22 +635,22 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             <summary>
                               Markup: <code>components/comment/comment.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;comment__section&quot;&gt;
-  &lt;article class=&quot;comment {{modifier_class}}&quot;&gt;
-    &lt;header&gt;
-      &lt;p&gt;&lt;a href=&quot;#&quot;&gt;Jane A. User&lt;/a&gt; replied on &lt;time&gt;Wed, 08/19/2015 - 17:51&lt;/time&gt;
-        &lt;a href=&quot;#&quot; class=&quot;comment__permalink&quot;&gt;Permalink&lt;/a&gt;
-      &lt;/p&gt;
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"comment__section"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"comment </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Jane A. User<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> replied on <span class="hljs-tag">&lt;<span class="hljs-name">time</span>&gt;</span>Wed, 08/19/2015 - 17:51<span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"comment__permalink"</span>&gt;</span>Permalink<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-      &lt;h3 class=&quot;comment__title&quot;&gt;
-        &lt;a href=&quot;#&quot;&gt;The comment&#039;s title&lt;/a&gt;
-      &lt;/h3&gt;
-    &lt;/header&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"comment__title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>The comment's title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
-    &lt;p&gt;Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.&lt;/p&gt;
-  &lt;/article&gt;
-&lt;/div&gt;
-</code></pre>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Conventio facilisis nutus. Distineo lucidus olim ut. Huic illum olim quadrum usitas. Bene ex pecus pneum uxor. Brevitas diam hos persto tincidunt virtus. Consequat dignissim distineo eros exerci huic ludus sino turpis.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -669,16 +674,16 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
                   <p class="kss-toolbar">
                           <a href="#kssref-components-divider" data-kss-fullscreen="kssref-components-divider">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-divider.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -689,7 +694,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
               </a>
                         <a href="#kssref-components-divider" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -710,7 +715,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             </a>
             <a href="#kssref-components-divider" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -721,6 +726,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             <p>Can be used as an <code>&lt;hr&gt;</code>, an empty <code>&lt;div&gt;</code> or as a container.</p>
 
           </div>
+        
         
               </div>
 
@@ -750,18 +756,18 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             <summary>
                               Markup: <code>components/divider/divider.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;divider {{modifier_class}}&quot;&gt;&lt;/div&gt;
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divider </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-&lt;p&gt;{{content}}&lt;/p&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{content}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-&lt;div class=&quot;divider {{modifier_class}}&quot;&gt;
-  &lt;p&gt;{{content}}&lt;/p&gt;
-&lt;/div&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divider </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{content}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-&lt;hr class=&quot;divider {{modifier_class}}&quot;&gt;
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divider </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
 
-&lt;p&gt;{{content}}&lt;/p&gt;
-</code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{content}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -785,16 +791,16 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
                   <p class="kss-toolbar">
                           <a href="#kssref-components-footer" data-kss-fullscreen="kssref-components-footer">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-footer.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -805,7 +811,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
               </a>
                         <a href="#kssref-components-footer" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -826,12 +832,13 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             </a>
             <a href="#kssref-components-footer" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+        
         
         
               </div>
@@ -856,7 +863,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             <summary>
                               Markup: <code>components/footer/footer.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{#
+            <pre class="hljs"><code class="language-twig"><span class="xml"></span><span class="hljs-comment">{#
 /**
  * @file
  * Component for the footer.
@@ -866,14 +873,14 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
  * - attributes: [string] HTML attributes for the wrapping element.
  * - content: [string] The component contents.
  */
-#}
-{{ attach_library(&#039;if_zen/footer&#039;) }}
-&lt;footer class=&quot;footer {{ modifier_class }}&quot; role=&quot;contentinfo&quot;{{ attributes }}&gt;
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-&lt;/footer&gt;
-</code></pre>
+#}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ attach_library('if_zen/footer') }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer </span></span></span><span class="hljs-template-variable">{{ modifier_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span></span></span><span class="hljs-template-variable">{{ attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> content %}</span><span class="xml">
+    </span><span class="hljs-template-variable">{{ content }}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -897,16 +904,16 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
                   <p class="kss-toolbar">
                           <a href="#kssref-components-header" data-kss-fullscreen="kssref-components-header">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-header.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -917,7 +924,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
               </a>
                         <a href="#kssref-components-header" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -938,12 +945,13 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             </a>
             <a href="#kssref-components-header" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
             </a>
           </p>
+        
         
         
               </div>
@@ -987,31 +995,31 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             <summary>
                               Markup: <code>components/header/header.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;header class=&quot;header {{modifier_class}} clearfix&quot; role=&quot;banner&quot;&gt;
-  &lt;a href=&quot;/&quot; title=&quot;Home&quot; rel=&quot;home&quot; class=&quot;header__logo&quot;&gt;
-    &lt;img src=&quot;kss-assets/sample-inline.png&quot; alt=&quot;Home&quot; class=&quot;header__logo-image&quot;&gt;
-  &lt;/a&gt;
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> clearfix"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Home"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"home"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__logo"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"kss-assets/sample-inline.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Home"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__logo-image"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
-  &lt;div class=&quot;header__name-and-slogan&quot;&gt;
-    &lt;h1 class=&quot;header__site-name&quot;&gt;
-      &lt;a href=&quot;/&quot; title=&quot;Home&quot; class=&quot;header__site-link&quot; rel=&quot;home&quot;&gt;Site Name&lt;/a&gt;
-    &lt;/h1&gt;
-    &lt;div class=&quot;header__site-slogan&quot;&gt;Slogan&lt;/div&gt;
-  &lt;/div&gt;
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__name-and-slogan"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__site-name"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Home"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__site-link"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"home"</span>&gt;</span>Site Name<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__site-slogan"</span>&gt;</span>Slogan<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  &lt;nav class=&quot;header__secondary-menu&quot; role=&quot;navigation&quot;&gt;
-    &lt;h2 class=&quot;visually-hidden&quot;&gt;User menu&lt;/h2&gt;
-    &lt;ul class=&quot;links inline clearfix&quot;&gt;
-      &lt;li class=&quot;menu-2 first&quot;&gt;&lt;a href=&quot;/user&quot;&gt;My account&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;menu-15 last&quot;&gt;&lt;a href=&quot;/user/logout&quot;&gt;Log out&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/nav&gt;
+  <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__secondary-menu"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span>User menu<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"links inline clearfix"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu-2 first"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/user"</span>&gt;</span>My account<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu-15 last"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/user/logout"</span>&gt;</span>Log out<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
-  &lt;div class=&quot;header__region&quot;&gt;
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__region"</span>&gt;</span>
     [Header region]
-  &lt;/div&gt;
-&lt;/header&gt;
-</code></pre>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1035,16 +1043,16 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
                   <p class="kss-toolbar">
                           <a href="#kssref-components-hidden" data-kss-fullscreen="kssref-components-hidden">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-hidden.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1055,7 +1063,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
               </a>
                         <a href="#kssref-components-hidden" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1076,7 +1084,7 @@ elements. See <a href="http://nicolasgallagher.com/micro-clearfix-hack/">http://
             </a>
             <a href="#kssref-components-hidden" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -1092,6 +1100,7 @@ from a user.</p>
 the <code>.js-hidden</code> class.</p>
 
           </div>
+        
         
               </div>
 
@@ -1113,10 +1122,10 @@ the <code>.js-hidden</code> class.</p>
             <summary>
                               Markup: <code>components/hidden/hidden.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;hidden {{modifier_class}}&quot;&gt;
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hidden </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   This content is hidden.
-&lt;/div&gt;
-</code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1140,16 +1149,16 @@ the <code>.js-hidden</code> class.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-highlight-mark" data-kss-fullscreen="kssref-components-highlight-mark">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-highlight-mark.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1160,7 +1169,7 @@ the <code>.js-hidden</code> class.</p>
               </a>
                         <a href="#kssref-components-highlight-mark" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1181,7 +1190,7 @@ the <code>.js-hidden</code> class.</p>
             </a>
             <a href="#kssref-components-highlight-mark" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -1194,6 +1203,7 @@ developer may choose to delete this component and just style the <code>&lt;mark&
 element directly.</p>
 
           </div>
+        
         
               </div>
 
@@ -1217,7 +1227,7 @@ element directly.</p>
             <summary>
                               Markup: <code>components/highlight-mark/highlight-mark.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{#
+            <pre class="hljs"><code class="language-twig"><span class="xml"></span><span class="hljs-comment">{#
 /**
  * @file
  * Component for a marker.
@@ -1226,12 +1236,12 @@ element directly.</p>
  * - modifier_class: [string] Classes to modify the default component styling.
  * - content: [string] The component contents.
  */
-#}
-{{ attach_library(&#039;if_zen/highlight-mark&#039;) }}
-&lt;mark class=&quot;highlight-mark {{ modifier_class }}&quot;&gt;
-  {{ content }}
-&lt;/mark&gt;
-</code></pre>
+#}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ attach_library('if_zen/highlight-mark') }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"highlight-mark </span></span></span><span class="hljs-template-variable">{{ modifier_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{ content }}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1255,16 +1265,16 @@ element directly.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-inline-links" data-kss-fullscreen="kssref-components-inline-links">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-inline-links.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1275,7 +1285,7 @@ element directly.</p>
               </a>
                         <a href="#kssref-components-inline-links" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1296,7 +1306,7 @@ element directly.</p>
             </a>
             <a href="#kssref-components-inline-links" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -1307,6 +1317,7 @@ element directly.</p>
             <p>A list of links that are inline with each other.</p>
 
           </div>
+        
         
               </div>
 
@@ -1327,13 +1338,13 @@ element directly.</p>
             <summary>
                               Markup: <code>components/inline-links/inline-links.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{{ attach_library(&#039;if_zen/inline-links&#039;) }}
-&lt;ul class=&quot;inline-links {{modifier_class}}&quot;&gt;
-  {% for link in links -%}
-    &lt;li class=&quot;inline-links__item&quot;&gt;&lt;a href=&quot;{{ link.url }}&quot;&gt;{{ link.text }}&lt;/a&gt;&lt;/li&gt;
-  {%- endfor %}
-&lt;/ul&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"></span><span class="hljs-template-variable">{{ attach_library('if_zen/inline-links') }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inline-links </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> link in links -%}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inline-links__item"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ link.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ link.text }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  </span><span class="hljs-template-tag">{%- <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1357,16 +1368,16 @@ element directly.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-inline-sibling" data-kss-fullscreen="kssref-components-inline-sibling">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-inline-sibling.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1377,7 +1388,7 @@ element directly.</p>
               </a>
                         <a href="#kssref-components-inline-sibling" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1398,7 +1409,7 @@ element directly.</p>
             </a>
             <a href="#kssref-components-inline-sibling" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -1409,6 +1420,7 @@ element directly.</p>
             <p>An element that needs to appear inline with the content that follows.</p>
 
           </div>
+        
         
               </div>
 
@@ -1429,9 +1441,9 @@ element directly.</p>
             <summary>
                               Markup: <code>components/inline-sibling/inline-sibling.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;h4 class=&quot;inline-sibling {{modifier_class}}&quot;&gt;A Heading&lt;/h4&gt;
-&lt;p&gt;A normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inline-sibling </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>A Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>A normal paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1455,16 +1467,16 @@ element directly.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-messages" data-kss-fullscreen="kssref-components-messages">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-messages.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1475,7 +1487,7 @@ element directly.</p>
               </a>
                         <a href="#kssref-components-messages" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1496,7 +1508,7 @@ element directly.</p>
             </a>
             <a href="#kssref-components-messages" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -1510,6 +1522,7 @@ should use the <code>.messages--error</code> class.</p>
 <p>The icon shown is not part of the CSS; it is an SVG image in the HTML.</p>
 
           </div>
+        
         
               </div>
 
@@ -1665,7 +1678,7 @@ should use the <code>.messages--error</code> class.</p>
             <summary>
                               Markup: <code>components/messages/messages.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{#
+            <pre class="hljs"><code class="language-twig"><span class="xml"></span><span class="hljs-comment">{#
 /**
  * @file
  * Component for messages.
@@ -1677,48 +1690,48 @@ should use the <code>.messages--error</code> class.</p>
  * - type: [string] The type of message: error, warning or status (default).
  * - messages: [array] The messages. Each item in the array is a string.
  */
-#}
-{{ attach_library(&#039;if_zen/messages&#039;) }}
-&lt;div class=&quot;messages {{ modifier_class }}&quot; role=&quot;contentinfo&quot; {% if heading %}aria-label=&quot;{{ heading }}&quot;{% endif %} {{ attributes }}&gt;
-  {% if type == &#039;error&#039; %}
-    &lt;div role=&quot;alert&quot;&gt;
-  {% endif %}
+#}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ attach_library('if_zen/messages') }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages </span></span></span><span class="hljs-template-variable">{{ modifier_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span> </span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> heading %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">aria-label</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ heading }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag"> </span></span><span class="hljs-template-variable">{{ attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == 'error' %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
-  {% block heading %}
-    {% if heading %}
-      &lt;h2 class=&quot;visually-hidden&quot;&gt;{{ heading }}&lt;/h2&gt;
-    {% endif %}
-  {% endblock heading %}
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> heading %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> heading %}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span></span><span class="hljs-template-variable">{{ heading }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> heading %}</span><span class="xml">
 
-  {% block icon %}
-    &lt;div class=&quot;messages__icon&quot;&gt;
-      {% if type == &#039;error&#039; %}
-        {% include &quot;@if_zen/components/messages/messages-icon-error.svg&quot; %}
-      {% elseif type == &#039;warning&#039; %}
-        {% include &quot;@if_zen/components/messages/messages-icon-warning.svg&quot; %}
-      {% else %}
-        {% include &quot;@if_zen/components/messages/messages-icon-status.svg&quot; %}
-      {% endif %}
-    &lt;/div&gt;
-  {% endblock icon %}
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> icon %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages__icon"</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == 'error' %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "@if_zen/components/messages/messages-icon-error.svg" %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == 'warning' %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "@if_zen/components/messages/messages-icon-warning.svg" %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "@if_zen/components/messages/messages-icon-status.svg" %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> icon %}</span><span class="xml">
 
-  {% block content %}
-    {% if messages|length &gt; 1 %}
-      &lt;ul class=&quot;messages__list&quot;&gt;
-        {% for message in messages %}
-          &lt;li class=&quot;messages__item&quot;&gt;{{ message }}&lt;/li&gt;
-        {% endfor %}
-      &lt;/ul&gt;
-    {% else %}
-      {{ messages|first }}
-    {% endif %}
-  {% endblock content %}
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> content %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> messages|<span class="hljs-keyword">length</span> &gt; 1 %}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages__list"</span>&gt;</span>
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> message in messages %}</span><span class="xml">
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages__item"</span>&gt;</span></span><span class="hljs-template-variable">{{ message }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
+      </span><span class="hljs-template-variable">{{ messages|<span class="hljs-keyword">first</span> }}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> content %}</span><span class="xml">
 
-  {% if type == &#039;error&#039; %}
-    &lt;/div&gt;
-  {% endif %}
-&lt;/div&gt;
-</code></pre>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == 'error' %}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1742,16 +1755,16 @@ should use the <code>.messages--error</code> class.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-print-none" data-kss-fullscreen="kssref-components-print-none">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-print-none.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1762,7 +1775,7 @@ should use the <code>.messages--error</code> class.</p>
               </a>
                         <a href="#kssref-components-print-none" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1783,7 +1796,7 @@ should use the <code>.messages--error</code> class.</p>
             </a>
             <a href="#kssref-components-print-none" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -1797,6 +1810,7 @@ print rules to be aggregated with other stylesheets, for improved front-end
 performance.</p>
 
           </div>
+        
         
               </div>
 
@@ -1818,10 +1832,10 @@ performance.</p>
             <summary>
                               Markup: <code>components/print-none/print-none.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;print-none&quot;&gt;
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"print-none"</span>&gt;</span>
   This item will not be printed.
-&lt;/p&gt;
-</code></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1845,16 +1859,16 @@ performance.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-components-responsive-video" data-kss-fullscreen="kssref-components-responsive-video">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-responsive-video.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1865,7 +1879,7 @@ performance.</p>
               </a>
                         <a href="#kssref-components-responsive-video" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -1886,7 +1900,7 @@ performance.</p>
             </a>
             <a href="#kssref-components-responsive-video" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -1899,6 +1913,7 @@ intrinsic aspect ratio is preserved at any screen width. The
 <code>responsive-video__embed</code> class is optional if the embed is an <code>iframe</code>.</p>
 
           </div>
+        
         
               </div>
 
@@ -1936,10 +1951,10 @@ intrinsic aspect ratio is preserved at any screen width. The
             <summary>
                               Markup: <code>components/responsive-video/responsive-video.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;responsive-video {{modifier_class}}&quot;&gt;
-  &lt;iframe class=&quot;responsive-video__embed&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/8N_tupPBtWQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"responsive-video </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"responsive-video__embed"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"560"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"315"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube.com/embed/8N_tupPBtWQ"</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -1963,16 +1978,16 @@ intrinsic aspect ratio is preserved at any screen width. The
                   <p class="kss-toolbar">
                           <a href="#kssref-components-visually-hidden" data-kss-fullscreen="kssref-components-visually-hidden">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-visually-hidden.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -1983,7 +1998,7 @@ intrinsic aspect ratio is preserved at any screen width. The
               </a>
                         <a href="#kssref-components-visually-hidden" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -2004,7 +2019,7 @@ intrinsic aspect ratio is preserved at any screen width. The
             </a>
             <a href="#kssref-components-visually-hidden" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -2015,6 +2030,7 @@ intrinsic aspect ratio is preserved at any screen width. The
             <p>Make an element visually hidden, but accessible to screen readers, etc.</p>
 
           </div>
+        
         
               </div>
 
@@ -2082,7 +2098,7 @@ intrinsic aspect ratio is preserved at any screen width. The
             <summary>
                               Markup: <code>components/visually-hidden/visually-hidden.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{#
+            <pre class="hljs"><code class="language-twig"><span class="xml"></span><span class="hljs-comment">{#
 /**
  * @file
  * Component for visually hidden content.
@@ -2091,13 +2107,13 @@ intrinsic aspect ratio is preserved at any screen width. The
  * - modifier_class: [string] Classes to modify the default component styling.
  * - content: [string] The component contents.
  */
-#}
-&lt;div class=&quot;visually-hidden {{modifier_class}}&quot;&gt;
-  {% block content %}
-    {{content}}
-  {% endblock %}
-&lt;/div&gt;
-</code></pre>
+#}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> content %}</span><span class="xml">
+    </span><span class="hljs-template-variable">{{content}}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -2121,16 +2137,16 @@ intrinsic aspect ratio is preserved at any screen width. The
                   <p class="kss-toolbar">
                           <a href="#kssref-components-watermark" data-kss-fullscreen="kssref-components-watermark">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-watermark.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -2141,7 +2157,7 @@ intrinsic aspect ratio is preserved at any screen width. The
               </a>
                         <a href="#kssref-components-watermark" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -2162,7 +2178,7 @@ intrinsic aspect ratio is preserved at any screen width. The
             </a>
             <a href="#kssref-components-watermark" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -2173,6 +2189,7 @@ intrinsic aspect ratio is preserved at any screen width. The
             <p>Make the element appear beneath sibling elements, like a watermark.</p>
 
           </div>
+        
         
               </div>
 
@@ -2199,7 +2216,7 @@ intrinsic aspect ratio is preserved at any screen width. The
             <summary>
                               Markup: <code>components/watermark/watermark.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{#
+            <pre class="hljs"><code class="language-twig"><span class="xml"></span><span class="hljs-comment">{#
 /**
  * @file
  * Component for watermark.
@@ -2208,12 +2225,12 @@ intrinsic aspect ratio is preserved at any screen width. The
  * - modifier_class: [string] Classes to modify the default component styling.
  * - content: [string] The component contents.
  */
-#}
-{{ attach_library(&#039;if_zen/watermark&#039;) }}
-&lt;mark class=&quot;watermark {{modifier_class}}&quot;&gt;
-  {{content}}
-&lt;/mark&gt;
-</code></pre>
+#}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ attach_library('if_zen/watermark') }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"watermark </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{content}}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -2237,16 +2254,16 @@ intrinsic aspect ratio is preserved at any screen width. The
                   <p class="kss-toolbar">
                           <a href="#kssref-components-wireframe" data-kss-fullscreen="kssref-components-wireframe">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-components-wireframe.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -2257,7 +2274,7 @@ intrinsic aspect ratio is preserved at any screen width. The
               </a>
                         <a href="#kssref-components-wireframe" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -2278,7 +2295,7 @@ intrinsic aspect ratio is preserved at any screen width. The
             </a>
             <a href="#kssref-components-wireframe" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -2292,6 +2309,7 @@ are useful when prototyping a website.</p>
 variable: <code>$with-wireframes: true;</code></p>
 
           </div>
+        
         
               </div>
 
@@ -2313,10 +2331,10 @@ variable: <code>$with-wireframes: true;</code></p>
             <summary>
                               Markup: <code>components/wireframe/wireframe.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;wireframe&quot;&gt;
-  {{content}}
-&lt;/div&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"wireframe"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{content}}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -2324,16 +2342,15 @@ variable: <code>$with-wireframes: true;</code></p>
         </div>
           </section>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

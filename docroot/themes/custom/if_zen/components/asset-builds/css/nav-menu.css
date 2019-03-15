@@ -18,15 +18,13 @@
   list-style-type: disc;
 }
 
-[dir="rtl"] .nav-menu__item.is-collapsed, [dir="rtl"] .nav-menu__item--is-collapsed,
-[dir="rtl"] .is-collapsed.menu__item,
-[dir="rtl"] .menu__item.is-collapsed {
+[dir="rtl"] .nav-menu__item.is-collapsed, [dir="rtl"] .nav-menu__item--is-collapsed, [dir="rtl"] .is-collapsed.menu__item, [dir="rtl"] .menu__item.is-collapsed {
   list-style-image: url(../..//navigation/nav-menu/collapsed-rtl.svg);
 }
 
 .nav-menu__link.is-active, .nav-menu__link--is-active,
 .menu a.active {
-  color: #000;
+  color: #f0f0f0;
 }
 
 /*# sourceMappingURL=nav-menu.css.map */

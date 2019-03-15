@@ -1,6 +1,6 @@
 .box {
   margin-bottom: 1.5rem;
-  border: 5px solid #cccccc;
+  border: 5px solid #dddddd;
   padding: 1em;
 }
 
@@ -9,11 +9,11 @@
 }
 
 .box:focus, .box:hover, .box.is-focus, .box--is-focus {
-  border-color: #000;
+  border-color: #f0f0f0;
 }
 
 .box--highlight {
-  border-color: #0072b9;
+  border-color: #f0f0f0;
 }
 
 /*# sourceMappingURL=box.css.map */

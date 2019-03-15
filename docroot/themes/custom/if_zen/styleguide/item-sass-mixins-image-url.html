@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -95,7 +95,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-sass-mixins-image-url" class="kss-section kss-section--depth-3 is-fullscreen">
@@ -116,21 +117,22 @@
                   <div class="kss-description">
             <p>If you include your images next to your component Sass files, you need to
 specify a url() to point from the generated CSS to the Sass source like this:</p>
-<pre><code class="lang-css">content: url(../../components/is-quite/long.svg);
+<pre class="hljs"><code class="language-css"><span class="hljs-selector-tag">content</span>: <span class="hljs-selector-tag">url</span>(../../<span class="hljs-selector-tag">components</span>/<span class="hljs-selector-tag">is-quite</span>/<span class="hljs-selector-tag">long</span><span class="hljs-selector-class">.svg</span>);
 </code></pre>
 <p>With the <code>image-url()</code> function the path to all your components is assumed to
 start with <code>../../components/</code> and you just need to give it the last, short
 bit of the path in your Sass code like this:</p>
-<pre><code class="lang-scss">content: image-url(is-quite/short.svg);
+<pre class="hljs"><code class="language-scss"><span class="hljs-attribute">content</span>: image-url(is-quite/short.svg);
 </code></pre>
 <p>If you want to point at an image that is not in the components sub-directory
 of your sass directory, you can override the default $subdirectory by
 passing it in as the first parameter of <code>image-url()</code> like this:</p>
-<pre><code class="lang-scss">content: image-url(base, grouping/blockquote.svg);
+<pre class="hljs"><code class="language-scss"><span class="hljs-attribute">content</span>: image-url(base, grouping/blockquote.svg);
 </code></pre>
 <p>which would output <code>url(../../base/grouping/blockquote.svg)</code>.</p>
 
           </div>
+        
         
                               <div class="kss-parameters__title">Parameters:</div>
             <ul class="kss-parameters">
@@ -167,16 +169,15 @@ passing it in as the first parameter of <code>image-url()</code> like this:</p>
         </div>
           </div>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

@@ -51,11 +51,11 @@ $font-size: (
 
 // Typey allows you to alter font weights site-wide with this map.
 $font-weight: (
-  bold:             bold,
+  bold:             700,
+  semiBold:         600,
   medium:           500,
-  normal:           normal,
-  light:            300,
-  lighter:          lighter,
+  normal:           400,
+  light:            300
 );
 
 // The following font family declarations use widely available fonts.
@@ -71,11 +71,13 @@ $times:           Times, 'Times New Roman', Georgia, 'DejaVu Serif', serif;
 $georgia:         Georgia, 'Times New Roman', 'DejaVu Serif', serif;
 
 // Sans-serif font stacks.
-$verdana:         Verdana, Tahoma, 'DejaVu Sans', sans-serif;
-$tahoma:          Tahoma, Verdana, 'DejaVu Sans', sans-serif;
-$helvetica:       Helvetica, Arial, 'Nimbus Sans L', sans-serif;
-$arial:           Arial, Helvetica, 'Nimbus Sans L', sans-serif;
-$impact:          Impact, 'Arial Narrow', Helvetica, sans-serif;
+$montserrat:          'Montserrat', Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+$open-sans-sondensed: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+$verdana:             Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+$tahoma:              Tahoma, Verdana, 'DejaVu Sans', sans-serif;
+$helvetica:           Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+$arial:               Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+$impact:              Impact, 'Arial Narrow', Helvetica, sans-serif;
 
 // Monospace font stacks.
 // For an explanation of why "sans-serif" is at the end of this list, see
@@ -86,17 +88,16 @@ $menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier Ne
 // typeface() mixin.
 $typefaces: (
   body: (
-    font-family: $verdana,
+    font-family: $montserrat,
   ),
   monospace: (
     font-family: $menlo,
   ),
   compact: (
-    font-family: $impact,
+    font-family: $open-sans-sondensed,
     weight: bold,
     case: uppercase,
-    // We could also specify the following property:
-    // letter-spacing: .5px,
+    letter-spacing: .5px,
   ),
 );
 
@@ -119,15 +120,21 @@ $rem-fallback:      false;
 //
 // Style guide: sass.variables.breakpoints
 
-@include add-breakpoint(xxxs, (333px, 'no-query' true));
-@include add-breakpoint(xxs,  (444px, 'no-query' true));
-@include add-breakpoint(xs,   (555px, 'no-query' true));
-@include add-breakpoint(s,    (666px, 'no-query' true));
-@include add-breakpoint(m,    (777px, 'no-query' true));
-@include add-breakpoint(l,    (888px, 'no-query' true));
-@include add-breakpoint(xl,   (999px, 'no-query' true));
-@include add-breakpoint(xxl,  (1111px));
-@include add-breakpoint(xxxl, (1222px));
+// Small phones (e.g. iPhone 5 - Portrait)
+@include add-breakpoint(iPhone5, (320px, 'no-query' true));
+// Small phones (e.g. iPhone 5 - Landscape)
+@include add-breakpoint(iPhone5Landscape, (480px, 'no-query' true));
+// Small phones (e.g. iPhone 5s - Landscape)
+@include add-breakpoint(iPhone5sLandscape, (568px, 'no-query' true));
+// Small phones (e.g. iPhone 6|7|8 - Landscape)
+@include add-breakpoint(iPhone8Landscape, (667px, 'no-query' true));
+// Small phones (e.g. iPhone 6|7|8Plus - Landscape)
+@include add-breakpoint(iPhone8PlusLandscape, (736px, 'no-query' true));
+@include add-breakpoint(iPhoneX, (834px, 'no-query' true));
+@include add-breakpoint(iPad, (834px, 'no-query' true));
+@include add-breakpoint(iPadLandscape, (1112px, 'no-query' true));
+@include add-breakpoint(iPadPro,  (1024px));
+@include add-breakpoint(Desktop, (1200px));
 
 // Output media queries where the above px are converted to ems.
 // @include breakpoint-set('to ems', true);
@@ -157,12 +164,11 @@ $zen-gutters: 40px;
 // above. That allows a single zen-respond-to() to both use the proper item
 // from $zen-layouts and from $breakpoints.
 $zen-layouts: (
-  m: (
+  iPad: (
     columns: 2,
-    // The gutters in the layouts are larger on mobile.
     gutters: 25px,
   ),
-  xl: (
+  iPadLandscape: (
     columns: 3,
     gutters: 25px,
   ),

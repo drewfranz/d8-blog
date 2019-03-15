@@ -1,8 +1,8 @@
 .tabs {
   margin: 1.125rem 0 0;
   line-height: 1.875rem;
-  border-bottom: 1px solid #cccccc \0/ie;
-  background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
+  border-bottom: 1px solid #dddddd \0/ie;
+  background-image: linear-gradient(to top, #dddddd 1px, transparent 1px);
   padding: 0 2px;
   list-style: none;
   white-space: nowrap;
@@ -17,13 +17,13 @@
 .tabs__tab {
   float: left;
   margin: 0 3px;
-  border: 1px solid #cccccc;
+  border: 1px solid #dddddd;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-color: transparent;
   border-bottom: 0 \0/ie;
   overflow: hidden;
-  background: #dddddd;
+  background: #eeeeee;
 }
 
 [dir="rtl"] .tabs__tab {
@@ -31,7 +31,7 @@
 }
 
 .tabs__tab.is-active {
-  border-bottom-color: #fff;
+  border-bottom-color: #201c29;
 }
 
 .tabs__tab-link {
@@ -39,18 +39,18 @@
   display: block;
   text-decoration: none;
   transition: color .3s, background .3s, border .3s;
-  text-shadow: #fff 0 1px 0;
-  color: #000;
-  background: #dddddd;
+  text-shadow: #f0f0f0 0 1px 0;
+  color: #f0f0f0;
+  background: #eeeeee;
   letter-spacing: 1px;
 }
 
 .tabs__tab-link:focus, .tabs__tab-link:hover {
-  background: #eaeaea;
+  background: #fbfbfb;
 }
 
 .tabs__tab-link:active, .tabs__tab-link.is-active, .tabs__tab-link--is-active {
-  background: #fff;
+  background: #201c29;
   text-shadow: none;
 }
 
@@ -63,7 +63,7 @@
 .tabs + .tabs--secondary,
 .tabs + h2 + .tabs--secondary {
   margin-top: 0;
-  background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
+  background-image: linear-gradient(to top, #dddddd 1px, transparent 1px);
 }
 
 .tabs--secondary .tabs__tab {
@@ -81,24 +81,24 @@
 }
 
 .tabs--secondary .tabs__tab-link {
-  border: 1px solid #cccccc;
+  border: 1px solid #dddddd;
   border-radius: 24px;
-  color: #666666;
-  background: #f1f1f1;
+  color: #777777;
+  background: white;
   letter-spacing: normal;
 }
 
 .tabs--secondary .tabs__tab-link:focus, .tabs--secondary .tabs__tab-link:hover {
-  color: #333333;
-  background: #dddddd;
-  border-color: #999999;
+  color: #444444;
+  background: #eeeeee;
+  border-color: #aaaaaa;
 }
 
 .tabs--secondary .tabs__tab-link:active, .tabs--secondary .tabs__tab-link.is-active, .tabs--secondary .tabs__tab-link--is-active {
   color: white;
-  text-shadow: #333333 0 1px 0;
-  background: #666666;
-  border-color: black;
+  text-shadow: #444444 0 1px 0;
+  background: #777777;
+  border-color: #111111;
 }
 
 /*# sourceMappingURL=tabs.css.map */

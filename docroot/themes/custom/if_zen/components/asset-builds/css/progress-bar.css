@@ -7,15 +7,15 @@
 .progress .bar {
   border-radius: 3px;
   margin: 0 .2em;
-  border: 1px solid #666666;
-  background-color: #cccccc;
+  border: 1px solid #777777;
+  background-color: #dddddd;
 }
 
 .progress-bar__fill,
 .progress .filled {
   height: 1.5em;
   width: 5px;
-  background: #0072b9 url(../..//forms/progress-bar/progress-bar.gif) repeat 0 0;
+  background: #1b7ebb url(../..//forms/progress-bar/progress-bar.gif) repeat 0 0;
 }
 
 .progress-bar__percentage,
@@ -23,9 +23,7 @@
   float: right;
 }
 
-[dir="rtl"] .progress-bar__percentage,
-[dir="rtl"] .progress .percentage,
-.progress [dir="rtl"] .percentage {
+[dir="rtl"] .progress-bar__percentage, [dir="rtl"] .progress .percentage, .progress [dir="rtl"] .percentage {
   float: left;
 }
 
@@ -35,8 +33,7 @@
   display: inline-block;
 }
 
-[dir="rtl"] .progress-bar--inline,
-[dir="rtl"] .ajax-progress-bar {
+[dir="rtl"] .progress-bar--inline, [dir="rtl"] .ajax-progress-bar {
   float: right;
 }
 

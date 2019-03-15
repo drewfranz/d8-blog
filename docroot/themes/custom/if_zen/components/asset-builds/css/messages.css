@@ -3,13 +3,12 @@
   margin: 1.5rem 0;
   position: relative;
   padding: 10px 10px 10px 44px;
-  border: 1px solid #0072b9;
-  background-color: #f6fcff;
-  color: #0072b9;
+  border: 1px solid #1b7ebb;
+  background-color: white;
+  color: #1b7ebb;
 }
 
-[dir="rtl"] .messages,
-[dir="rtl"] .messages--status {
+[dir="rtl"] .messages, [dir="rtl"] .messages--status {
   padding: 10px 44px 10px 10px;
 }
 
@@ -29,11 +28,11 @@
 }
 
 .messages__icon path {
-  fill: #0072b9;
+  fill: #1b7ebb;
 }
 
 .messages__highlight {
-  color: #000;
+  color: #f0f0f0;
 }
 
 .messages__list {
@@ -45,23 +44,23 @@
 }
 
 .messages--warning {
-  border-color: #fd0;
-  background-color: #fffce6;
-  color: #000;
+  border-color: #ffe437;
+  background-color: white;
+  color: #f0f0f0;
 }
 
 .messages--warning path {
-  fill: #fd0;
+  fill: #ffe437;
 }
 
 .messages--error {
-  border-color: #c00;
-  background-color: #fff0f0;
-  color: #c00;
+  border-color: #e41818;
+  background-color: white;
+  color: #e41818;
 }
 
 .messages--error path {
-  fill: #c00;
+  fill: #e41818;
 }
 
 /*# sourceMappingURL=messages.css.map */

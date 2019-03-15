@@ -6,8 +6,8 @@
 
 .resizable-textarea__grippie,
 .resizable-textarea .grippie {
-  background: url(../..//forms/resizable-textarea/grippie.png) no-repeat center 2px #eeeeee;
-  border: 1px solid #cccccc;
+  background: url(../..//forms/resizable-textarea/grippie.png) no-repeat center 2px white;
+  border: 1px solid #dddddd;
   border-top-width: 0;
   cursor: s-resize;
   height: 9px;

@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -95,47 +95,46 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
       <div id="kssref-0" class="kss-section kss-section--depth-0 kss-overview kss-style">
-      <h1 id="style-guide-for-the-if_zen-theme">Style Guide for the <code>if_zen</code> Theme</h1>
+      <h1>Style Guide for the <code>if_zen</code> Theme</h1>
 <p>This style guide documents the designs of this website which are built with component-based styles and Sass variables, functions and mixins. To ensure it is always up-to-date, this style guide is automatically generated from comments in the Sass files.</p>
-<h2 id="organization">Organization</h2>
+<h2>Organization</h2>
 <p>Design components are reusable designs that can be applied using just the CSS class names specified in the component. We categorize our components to make them easy to find.</p>
 <dl>
-<dt><strong>Defaults</strong></dt>
-<dd><code>components/base</code> — The default “base” components apply to HTML elements. Since all of the rulesets in this class of styles are HTML elements, the styles apply automatically.</dd>
-<dt><strong>Layouts</strong></dt>
-<dd><code>components/layouts</code> — Layout components position major chunks of the page. They just apply positioning, no other styles.</dd>
-<dt><strong>Components</strong></dt>
-<dd><code>components/components</code> — Miscellaneous components are grouped together, but feel free to further categorize these.</dd>
-<dt><strong>Navigation</strong></dt>
-<dd><code>components/navigation</code> — Navigation components are specialized design components that are applied to website navigation.</dd>
-<dt><strong>Forms</strong></dt>
-<dd><code>components/forms</code> — Form components are specialized design components that are applied to forms or form elements.</dd>
+<dt>**Defaults**</dt>
+<dd>`components/base` — The default “base” components apply to HTML elements. Since all of the rulesets in this class of styles are HTML elements, the styles apply automatically.</dd>
+<dt>**Layouts**</dt>
+<dd>`components/layouts` — Layout components position major chunks of the page. They just apply positioning, no other styles.</dd>
+<dt>**Components**</dt>
+<dd>`components/components` — Miscellaneous components are grouped together, but feel free to further categorize these.</dd>
+<dt>**Navigation**</dt>
+<dd>`components/navigation` — Navigation components are specialized design components that are applied to website navigation.</dd>
+<dt>**Forms**</dt>
+<dd>`components/forms` — Form components are specialized design components that are applied to forms or form elements.</dd>
 </dl>
-
 <p>In addition to the components, our component library also contains these folders:</p>
 <dl>
-<dt><strong>Colors and Sass</strong></dt>
-<dd><code>components/init</code> — This Sass documents the colors used throughout the site and various Sass variables, functions and mixins. It also initializes everything we need for all other Sass files: variables, 3rd-party libraries, custom mixins and custom functions.</dd>
-<dt><strong>Style guide helper files</strong></dt>
-<dd><code>components/style-guide</code> — files needed to build this automated style guide; includes some CSS overrides for the default KSS style guide</dd>
-<dt><strong>Generated files</strong></dt>
-<dd><code>components/asset-builds</code> — location of the generated CSS; don&#39;t alter these files</dd>
+<dt>**Colors and Sass**</dt>
+<dd>`components/init` — This Sass documents the colors used throughout the site and various Sass variables, functions and mixins. It also initializes everything we need for all other Sass files: variables, 3rd-party libraries, custom mixins and custom functions.</dd>
+<dt>**Style guide helper files**</dt>
+<dd>`components/style-guide` — files needed to build this automated style guide; includes some CSS overrides for the default KSS style guide</dd>
+<dt>**Generated files**</dt>
+<dd>`components/asset-builds` — location of the generated CSS; don't alter these files</dd>
 </dl>
 
     </div>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'
