@@ -24,7 +24,7 @@ abbr[title] {
 
   @media print {
     // Add visible title after abbreviations.
-    &:after {
+    &::after {
       content: ' (' attr(title) ')';
     }
   }
@@ -67,9 +67,9 @@ b {
 //
 // Style guide: base.text.cite
 
-cite {
-  // Add your styles.
-}
+// cite {
+//   // Add your styles.
+// }
 
 // Code
 //
@@ -102,9 +102,9 @@ var {
 //
 // Style guide: base.text.del
 
-del {
-  // Add your styles.
-}
+// del {
+//   // Add your styles.
+// }
 
 // Definition
 //
@@ -133,10 +133,10 @@ dfn {
 //
 // Style guide: base.text.i
 
-i,
-em {
-  // Add your styles.
-}
+// i,
+// em {
+//   // Add your styles.
+// }
 
 // Inserted text
 //
@@ -146,9 +146,9 @@ em {
 //
 // Style guide: base.text.ins
 
-ins {
-  // Add your styles.
-}
+// ins {
+//   // Add your styles.
+// }
 
 // Marked text
 //
@@ -174,9 +174,9 @@ mark {
 //
 // Style guide: base.text.q
 
-q {
-  // Add your styles.
-}
+// q {
+//   // Add your styles.
+// }
 
 // Strikethrough text
 //
@@ -186,9 +186,9 @@ q {
 //
 // Style guide: base.text.s
 
-s {
-  // Add your styles.
-}
+// s {
+//   // Add your styles.
+// }
 
 // Small text
 //
@@ -240,6 +240,6 @@ sup {
 //
 // Style guide: base.text.u
 
-u {
-  // Add your styles.
-}
+// u {
+//   // Add your styles.
+// }

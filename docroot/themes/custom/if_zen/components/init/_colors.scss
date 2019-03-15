@@ -15,33 +15,34 @@
 $chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes.');
 
 $chroma: add-colors((
-  black:                  #000,
-  grey-dark:              ('black' lighten 40%), // #666
-  'grey':                 ('black' lighten 60%), // #999
-  grey-light:             ('black' lighten 80%), // #ccc
-  grey-extra-light:       ('black' lighten 93.33%), // #eee
-  white:                  #fff,
+  black:                  #111,
+  grey-dark:              ('black' lighten 40%),
+  'grey':                 ('black' lighten 60%),
+  grey-light:             ('black' lighten 80%),
+  grey-extra-light:       ('black' lighten 93.33%),
+  white:                  rgb(240, 240, 240),
 
-  blue:                   #0072b9,
-  red:                    #c00,
-  yellow:                 #fd0,
+  dark-purple:            #201c29,
+  blue:                   #1b7ebb,
+  red:                    rgb(228, 24, 24),
+  yellow:                 rgb(255, 228, 55),
 ));
 
 // Define color names for functional uses.
 $chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
 $chroma: add-colors('functional', (
   // Colors used in the main content area.
-  text:                   'black',
-  text-bg:                'white',
+  text:                   'white',
+  text-bg:                'dark-purple',
 
-  link:                   'blue',
-  link-visited:           ('blue' darken 20%),
-  link-active:            'red',
+  link:                   'white',
+  link-visited:           ('white' darken 20%),
+  link-active:            'yellow',
 
   border:                 'grey-light',
 
-  autocomplete:           'text',
-  autocomplete-bg:        'text-bg',
+  autocomplete:           'black',
+  autocomplete-bg:        'white',
   autocomplete-select:    'white',
   autocomplete-select-bg: 'blue',
 

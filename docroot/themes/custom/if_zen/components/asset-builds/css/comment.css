@@ -14,7 +14,7 @@
 
 .comment--preview,
 .comment-preview {
-  background-color: #fffadb;
+  background-color: white;
 }
 
 .comment--nested,
@@ -22,8 +22,7 @@
   margin-left: 32px;
 }
 
-[dir="rtl"] .comment--nested,
-[dir="rtl"] .indented {
+[dir="rtl"] .comment--nested, [dir="rtl"] .indented {
   margin-left: 0;
   margin-right: 32px;
 }

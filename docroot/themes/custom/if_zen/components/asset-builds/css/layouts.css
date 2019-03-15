@@ -32,10 +32,10 @@
   margin-left: -100%;
 }
 
-@media (min-width: 777px) {
+@media (min-width: 736px) {
   .layout-3col {
-    margin-left: -12px;
-    margin-right: -13px;
+    margin-left: -20px;
+    margin-right: -20px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -48,65 +48,49 @@
     display: table;
     clear: both;
   }
-  [dir="rtl"] .layout-3col {
-    margin-left: -13px;
-    margin-right: -12px;
-  }
   .layout-3col__full, .layout-3col__left-content, .layout-3col__right-content, .layout-3col__left-sidebar, .layout-3col__right-sidebar {
+    float: left;
+    width: 200%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  [dir="rtl"] .layout-3col__full, [dir="rtl"] .layout-3col__left-content, [dir="rtl"] .layout-3col__right-content, [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__right-sidebar {
+    float: right;
+    margin-right: 0%;
+    margin-left: -100%;
+  }
+  .layout-3col__first-left-sidebar, .layout-3col__col-1, .layout-3col__col-3, .layout-3col__col-x:nth-child(2n + 1) {
     float: left;
     width: 100%;
     margin-left: 0%;
     margin-right: -100%;
-    padding-left: 12px;
-    padding-right: 13px;
-  }
-  [dir="rtl"] .layout-3col__full, [dir="rtl"] .layout-3col__left-content, [dir="rtl"] .layout-3col__right-content, [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__right-sidebar {
-    float: right;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__full, [dir="rtl"] .layout-3col__left-content, [dir="rtl"] .layout-3col__right-content, [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__right-sidebar {
-    padding-left: 13px;
-    padding-right: 12px;
-  }
-  .layout-3col__first-left-sidebar, .layout-3col__col-1, .layout-3col__col-3, .layout-3col__col-x:nth-child(2n + 1) {
-    float: left;
-    width: 50%;
-    margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 12px;
-    padding-right: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   [dir="rtl"] .layout-3col__first-left-sidebar, [dir="rtl"] .layout-3col__col-1, [dir="rtl"] .layout-3col__col-3, [dir="rtl"] .layout-3col__col-x:nth-child(2n + 1) {
     float: right;
     margin-right: 0%;
     margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__first-left-sidebar, [dir="rtl"] .layout-3col__col-1, [dir="rtl"] .layout-3col__col-3, [dir="rtl"] .layout-3col__col-x:nth-child(2n + 1) {
-    padding-left: 13px;
-    padding-right: 12px;
   }
   .layout-3col__second-left-sidebar, .layout-3col__col-2, .layout-3col__col-4, .layout-3col__col-x:nth-child(2n) {
     clear: none;
     float: left;
-    width: 50%;
-    margin-left: 50%;
+    width: 100%;
+    margin-left: 100%;
     margin-right: -100%;
-    padding-left: 12px;
-    padding-right: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   [dir="rtl"] .layout-3col__second-left-sidebar, [dir="rtl"] .layout-3col__col-2, [dir="rtl"] .layout-3col__col-4, [dir="rtl"] .layout-3col__col-x:nth-child(2n) {
     float: right;
-    margin-right: 50%;
+    margin-right: 100%;
     margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__second-left-sidebar, [dir="rtl"] .layout-3col__col-2, [dir="rtl"] .layout-3col__col-4, [dir="rtl"] .layout-3col__col-x:nth-child(2n) {
-    padding-left: 13px;
-    padding-right: 12px;
   }
 }
 
-@media (min-width: 999px) {
+@media (min-width: 1112px) {
   .layout-3col__full {
     float: left;
     width: 100%;
@@ -234,14 +218,10 @@
   max-width: 1165px;
 }
 
-@media (min-width: 777px) {
+@media (min-width: 736px) {
   .layout-center {
-    padding-left: 12px;
-    padding-right: 13px;
-  }
-  [dir="rtl"] .layout-center {
-    padding-left: 13px;
-    padding-right: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -255,13 +235,13 @@
   position: relative;
 }
 
-@media (min-width: 555px) {
+@media (min-width: 568px) {
   .layout-swap {
     padding-top: 48px;
   }
 }
 
-@media (min-width: 555px) {
+@media (min-width: 568px) {
   .layout-swap__top {
     position: absolute;
     top: 0;

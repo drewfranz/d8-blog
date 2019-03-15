@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -95,7 +95,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-base-embedded-svg" class="kss-section kss-section--depth-3 is-fullscreen">
@@ -115,7 +116,7 @@
                   <p class="kss-toolbar">
                         <a href="#kssref-base-embedded-svg" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -136,7 +137,7 @@
             </a>
             <a href="#kssref-base-embedded-svg" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -147,6 +148,7 @@
             <p>A <code>&lt;svg&gt;</code> element represents an image encoded as a Scalable Vector Graphic.</p>
 
           </div>
+        
         
               </div>
 
@@ -173,15 +175,15 @@
             <summary>
                               Markup: <code>base/embedded/embedded-svg.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;A svg image &lt;svg class=&quot;{{modifier_class}}&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.1&quot; id=&quot;Layer_1&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;10px&quot; height=&quot;10px&quot; viewBox=&quot;0 0 512 512&quot; enable-background=&quot;new 0 0 512 512&quot; xml:space=&quot;preserve&quot;&gt;&lt;polygon fill=&quot;#bdad94&quot; stroke=&quot;#bdad94&quot; stroke-width=&quot;37.6152&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;10&quot; points=&quot;  259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08   29.274,197.007 188.165,173.919 &quot;/&gt;&lt;/svg&gt; that is inline with other text.&lt;/p&gt;
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>A svg image <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Layer_1"</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"0px"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"0px"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"10px"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"10px"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 512 512"</span> <span class="hljs-attr">enable-background</span>=<span class="hljs-string">"new 0 0 512 512"</span> <span class="hljs-attr">xml:space</span>=<span class="hljs-string">"preserve"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#bdad94"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"#bdad94"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"37.6152"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-miterlimit</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"  259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08   29.274,197.007 188.165,173.919 "</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span> that is inline with other text.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-&lt;figure style=&quot;width: 50%; max-width: 300px;&quot;&gt;
-  &lt;figcaption&gt;A svg inside a figure.&lt;/figcaption&gt;
-  &lt;svg class=&quot;{{modifier_class}}&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.1&quot; id=&quot;Layer_1&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;300px&quot; height=&quot;300px&quot; viewBox=&quot;0 0 512 512&quot; enable-background=&quot;new 0 0 512 512&quot; xml:space=&quot;preserve&quot;&gt;
-  &lt;polygon fill=&quot;#bdad94&quot; stroke=&quot;#bdad94&quot; stroke-width=&quot;37.6152&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-miterlimit=&quot;10&quot; points=&quot;  259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08   29.274,197.007 188.165,173.919 &quot;/&gt;
-  &lt;/svg&gt;
-&lt;/figure&gt;
-</code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 50%; max-width: 300px;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>A svg inside a figure.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Layer_1"</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"0px"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"0px"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"300px"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"300px"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 512 512"</span> <span class="hljs-attr">enable-background</span>=<span class="hljs-string">"new 0 0 512 512"</span> <span class="hljs-attr">xml:space</span>=<span class="hljs-string">"preserve"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#bdad94"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"#bdad94"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"37.6152"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-miterlimit</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"  259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08   29.274,197.007 188.165,173.919 "</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -189,16 +191,15 @@
         </div>
           </div>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'
