@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -95,7 +95,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-navigation-pager" class="kss-section kss-section--depth-2 is-fullscreen">
@@ -115,7 +116,7 @@
                   <p class="kss-toolbar">
                         <a href="#kssref-navigation-pager" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -136,7 +137,7 @@
             </a>
             <a href="#kssref-navigation-pager" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -148,6 +149,7 @@
 is available.</p>
 
           </div>
+        
         
               </div>
 
@@ -193,34 +195,34 @@ is available.</p>
             <summary>
                               Markup: <code>navigation/pager/pager.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;pager {{modifier_class}}&quot;&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to first page&quot; href=&quot;/admin/content&quot;&gt;« first&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to previous page&quot; href=&quot;/admin/content?page=1&quot;&gt;‹ previous&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 1&quot; href=&quot;/admin/content&quot;&gt;1&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 2&quot; href=&quot;/admin/content?page=1&quot;&gt;2&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__current-item&quot;&gt;3&lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 4&quot; href=&quot;/admin/content?page=3&quot;&gt;4&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to page 5&quot; href=&quot;/admin/content?page=4&quot;&gt;5&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to next page&quot; href=&quot;/admin/content?page=3&quot;&gt;next ›&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class=&quot;pager__item&quot;&gt;
-    &lt;a title=&quot;Go to last page&quot; href=&quot;/admin/content?page=4&quot;&gt;last »&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to first page"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content"</span>&gt;</span>« first<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to previous page"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content?page=1"</span>&gt;</span>‹ previous<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to page 1"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to page 2"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content?page=1"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__current-item"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to page 4"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content?page=3"</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to page 5"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content?page=4"</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to next page"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content?page=3"</span>&gt;</span>next ›<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pager__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Go to last page"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/admin/content?page=4"</span>&gt;</span>last »<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -228,16 +230,15 @@ is available.</p>
         </div>
           </div>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

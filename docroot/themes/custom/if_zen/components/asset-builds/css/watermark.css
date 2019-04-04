@@ -1,12 +1,13 @@
 .watermark {
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: "Open Sans Condensed", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.03125em;
+  font-weight: 700;
   text-transform: uppercase;
   display: block;
   height: 0;
   overflow: visible;
   background-color: transparent;
-  color: #eeeeee;
+  color: white;
   font-size: 75px;
   line-height: 1;
   text-align: center;

@@ -5,12 +5,12 @@ body.drag {
 
 .table-drag__item,
 tr.drag {
-  background-color: #fffadb;
+  background-color: white;
 }
 
 .table-drag__item-previous,
 tr.drag-previous {
-  background-color: #fff7c2;
+  background-color: #f2f2f2;
 }
 
 .table-drag__handle,
@@ -24,8 +24,7 @@ tr.drag-previous {
   font-size: 12px;
 }
 
-[dir="rtl"] .table-drag__handle,
-[dir="rtl"] .tabledrag-handle {
+[dir="rtl"] .table-drag__handle, [dir="rtl"] .tabledrag-handle {
   float: right;
   margin-right: -1em;
   margin-left: 0;
@@ -47,10 +46,9 @@ tr.drag-previous {
   width: 13px;
 }
 
-.table-drag__handle.is-hover .table-drag__handle-icon, .table-drag__handle-icon--is-hover, .is-hover.tabledrag-handle .table-drag__handle-icon,
-.tabledrag-handle-hover .handle,
-.table-drag__handle.is-hover .tabledrag-handle .handle,
-.tabledrag-handle .table-drag__handle.is-hover .handle,
+.table-drag__handle.is-hover .table-drag__handle-icon, .table-drag__handle-icon--is-hover,
+.is-hover.tabledrag-handle .table-drag__handle-icon,
+.tabledrag-handle-hover .handle, .table-drag__handle.is-hover .tabledrag-handle .handle, .tabledrag-handle .table-drag__handle.is-hover .handle,
 .is-hover.tabledrag-handle .handle {
   background-position: 6px -11px;
 }
@@ -60,8 +58,7 @@ tr.drag-previous {
   text-align: right;
 }
 
-[dir="rtl"] .table-drag__toggle-weight-wrapper,
-[dir="rtl"] .tabledrag-toggle-weight-wrapper {
+[dir="rtl"] .table-drag__toggle-weight-wrapper, [dir="rtl"] .tabledrag-toggle-weight-wrapper {
   text-align: left;
 }
 
@@ -79,8 +76,7 @@ tr.drag-previous {
   width: 20px;
 }
 
-[dir="rtl"] .table-drag__indentation,
-[dir="rtl"] .indentation {
+[dir="rtl"] .table-drag__indentation, [dir="rtl"] .indentation {
   float: right;
   margin: -.4em -.4em -.4em .2em;
   padding: .42em .6em .42em 0;
@@ -95,12 +91,7 @@ tr.drag-previous {
   background: url(../..//forms/table-drag/tree-child.png) no-repeat 11px center;
 }
 
-[dir="rtl"] .table-drag__tree-child,
-[dir="rtl"] .table-drag__tree-child-last,
-[dir="rtl"] .tree-child-last,
-[dir="rtl"] .table-drag__tree-child-horizontal,
-[dir="rtl"] .tree-child-horizontal,
-[dir="rtl"] .tree-child {
+[dir="rtl"] .table-drag__tree-child, [dir="rtl"] .table-drag__tree-child-last, [dir="rtl"] .tree-child-last, [dir="rtl"] .table-drag__tree-child-horizontal, [dir="rtl"] .tree-child-horizontal, [dir="rtl"] .tree-child {
   background-position: -65px center;
 }
 

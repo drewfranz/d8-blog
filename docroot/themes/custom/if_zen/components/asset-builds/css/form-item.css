@@ -4,7 +4,7 @@
 
 .form-item__required,
 .form-required {
-  color: #c00;
+  color: #e41818;
 }
 
 .form-item__description,
@@ -13,7 +13,9 @@
 }
 
 .form-item--inline div,
-.form-item--inline label, .container-inline .form-item div, .container-inline .form-item label {
+.form-item--inline label,
+.container-inline .form-item div,
+.container-inline .form-item label {
   display: inline;
 }
 
@@ -32,24 +34,23 @@ table .form-item {
   margin: 0;
 }
 
-.form-item--radio .form-item__label, .form-item--radio__label, .form-type-radio .form-item__label,
+.form-item--radio .form-item__label, .form-item--radio__label,
+.form-type-radio .form-item__label,
 .form-type-checkbox .form-item__label,
 label.option {
   display: inline;
   font-weight: normal;
 }
 
-.form-item--radio .form-item__description, .form-item--radio__description, .form-type-radio .form-item__description,
+.form-item--radio .form-item__description, .form-item--radio__description,
+.form-type-radio .form-item__description,
 .form-type-checkbox .form-item__description,
 .form-type-radio .description,
-.form-type-checkbox .description,
-.form-item--radio .form-item .description,
-.form-item .form-item--radio .description,
+.form-type-checkbox .description, .form-item--radio .form-item .description, .form-item .form-item--radio .description,
 .form-type-radio .form-item .description,
 .form-item .form-type-radio .description,
 .form-type-checkbox .form-item .description,
-.form-item
-.form-type-checkbox .description {
+.form-item .form-type-checkbox .description {
   margin-left: 1.4em;
 }
 
@@ -63,7 +64,7 @@ label.option {
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
-  border: 1px solid #c00;
+  border: 1px solid #e41818;
 }
 
 /*# sourceMappingURL=form-item.css.map */

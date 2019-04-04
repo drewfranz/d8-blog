@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans+Condensed:700");
 * {
   box-sizing: border-box;
 }
@@ -5,7 +6,7 @@
 html {
   font-size: 100%;
   line-height: 1.5em;
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, "Nimbus Sans L", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   min-height: 100%;
@@ -20,8 +21,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: #000;
-  background-color: #fff;
+  color: #f0f0f0;
+  background-color: #201c29;
 }
 
 article,
@@ -61,16 +62,16 @@ template,
 }
 
 a {
-  color: #0072b9;
+  color: #f0f0f0;
   -webkit-text-decoration-skip: objects;
 }
 
 :visited {
-  color: #003353;
+  color: #bdbdbd;
 }
 
 a:active {
-  color: #c00;
+  color: #ffe437;
 }
 
 a:active:not(.button) {
@@ -87,14 +88,14 @@ a:hover {
   :visited {
     text-decoration: underline;
   }
-  a[href]:after {
+  a[href]::after {
     content: " (" attr(href) ")";
     font-weight: normal;
     font-size: 16px;
     text-decoration: none;
   }
-  a[href^='javascript:']:after,
-  a[href^='#']:after {
+  a[href^='javascript:']::after,
+  a[href^='#']::after {
     content: '';
   }
 }
@@ -144,11 +145,12 @@ h6 {
 abbr[title] {
   border-bottom: 0;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 @media print {
-  abbr[title]:after {
+  abbr[title]::after {
     content: " (" attr(title) ")";
   }
 }
@@ -177,8 +179,8 @@ dfn {
 }
 
 mark {
-  background-color: #fd0;
-  color: #000;
+  background-color: #ffe437;
+  color: #f0f0f0;
 }
 
 small {
@@ -205,10 +207,11 @@ sup {
 hr {
   margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #dddddd;
 }
 
-.divider > :first-child, hr > :first-child {
+.divider > :first-child,
+hr > :first-child {
   margin-top: 1.5rem;
 }
 
@@ -346,7 +349,7 @@ button,
   line-height: inherit;
   text-decoration: none;
   cursor: pointer;
-  color: #000;
+  color: #f0f0f0;
 }
 
 .button::-moz-focus-inner,
@@ -380,32 +383,32 @@ button:active,
 [type='submit']:focus,
 [type='submit']:active {
   text-decoration: none;
-  color: #000;
+  color: #f0f0f0;
 }
 
-[disabled].button,
+.button[disabled],
 button[disabled],
 [disabled][type='button'],
 [disabled][type='reset'],
 [disabled][type='submit'] {
   cursor: default;
-  color: #999999;
+  color: #aaaaaa;
 }
 
-[disabled].button:hover,
+.button[disabled]:hover,
 button[disabled]:hover,
-[disabled][type='button']:hover,
-[disabled][type='reset']:hover,
-[disabled][type='submit']:hover, [disabled].button:focus,
+[disabled]:hover[type='button'],
+[disabled]:hover[type='reset'],
+[disabled]:hover[type='submit'], .button[disabled]:focus,
 button[disabled]:focus,
-[disabled][type='button']:focus,
-[disabled][type='reset']:focus,
-[disabled][type='submit']:focus, [disabled].button:active,
+[disabled]:focus[type='button'],
+[disabled]:focus[type='reset'],
+[disabled]:focus[type='submit'], .button[disabled]:active,
 button[disabled]:active,
-[disabled][type='button']:active,
-[disabled][type='reset']:active,
-[disabled][type='submit']:active {
-  color: #999999;
+[disabled]:active[type='button'],
+[disabled]:active[type='reset'],
+[disabled]:active[type='submit'] {
+  color: #aaaaaa;
 }
 
 [type='checkbox'],
@@ -416,7 +419,7 @@ button[disabled]:active,
 
 fieldset {
   padding: 0.525rem 0.9375rem 0.975rem;
-  border: 1px solid #cccccc;
+  border: 1px solid #dddddd;
   margin: 0 2px;
 }
 

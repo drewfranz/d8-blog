@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -95,7 +95,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-forms-base-input" class="kss-section kss-section--depth-3 is-fullscreen">
@@ -115,7 +116,7 @@
                   <p class="kss-toolbar">
                         <a href="#kssref-forms-base-input" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -136,7 +137,7 @@
             </a>
             <a href="#kssref-forms-base-input" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -149,6 +150,7 @@ HTML5 types: <code>text</code>, <code>search</code>, <code>tel</code>, <code>url
 <code>time</code>, <code>number</code>, <code>range</code>, <code>color</code>, and <code>file</code>.</p>
 
           </div>
+        
         
               </div>
 
@@ -264,121 +266,120 @@ HTML5 types: <code>text</code>, <code>search</code>, <code>tel</code>, <code>url
             <summary>
                               Markup: <code>base/forms/forms-input.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div&gt;
-  &lt;label for=&quot;inputText&quot;&gt;Text&lt;/label&gt;
-  &lt;input type=&quot;text&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputText&quot; placeholder=&quot;Enter some text&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputSearch&quot;&gt;Search&lt;/label&gt;
-  &lt;input type=&quot;search&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputSearch&quot; placeholder=&quot;Search&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputTel&quot;&gt;Telephone&lt;/label&gt;
-  &lt;input type=&quot;text&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputTel&quot; placeholder=&quot;Enter some text&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputURL&quot;&gt;URL&lt;/label&gt;
-  &lt;input type=&quot;url&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputURL&quot; placeholder=&quot;Enter a URL&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputEmail&quot;&gt;Email address&lt;/label&gt;
-  &lt;input type=&quot;email&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputEmail&quot; placeholder=&quot;Enter email&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputPassword&quot;&gt;Password&lt;/label&gt;
-  &lt;input type=&quot;password&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputPassword&quot; placeholder=&quot;Password&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputDate&quot;&gt;Date&lt;/label&gt;
-  &lt;input type=&quot;date&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputDate&quot; placeholder=&quot;Enter a date&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputTime&quot;&gt;Time&lt;/label&gt;
-  &lt;input type=&quot;time&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputTime&quot; placeholder=&quot;Enter a time&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputNumber&quot;&gt;Number&lt;/label&gt;
-  &lt;input type=&quot;number&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputNumber&quot; placeholder=&quot;Enter a number&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputRange&quot;&gt;Range&lt;/label&gt;
-  &lt;input type=&quot;range&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputRange&quot; placeholder=&quot;Enter a range&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputColor&quot;&gt;Color&lt;/label&gt;
-  &lt;input type=&quot;color&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputColor&quot; placeholder=&quot;Enter a color&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputFile&quot;&gt;File input&lt;/label&gt;
-  &lt;input type=&quot;file&quot; class=&quot;{{modifier_class}}&quot; id=&quot;inputFile&quot;&gt;
-&lt;/div&gt;
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputText"</span>&gt;</span>Text<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputText"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter some text"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputSearch"</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputSearch"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputTel"</span>&gt;</span>Telephone<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputTel"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter some text"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputURL"</span>&gt;</span>URL<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputURL"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter a URL"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputEmail"</span>&gt;</span>Email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputEmail"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter email"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputPassword"</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputPassword"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Password"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputDate"</span>&gt;</span>Date<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputDate"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter a date"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputTime"</span>&gt;</span>Time<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"time"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputTime"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter a time"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputNumber"</span>&gt;</span>Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputNumber"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter a number"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputRange"</span>&gt;</span>Range<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputRange"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter a range"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputColor"</span>&gt;</span>Color<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"color"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputColor"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter a color"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputFile"</span>&gt;</span>File input<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputFile"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-&lt;div&gt;
-  &lt;label for=&quot;inputText&quot;&gt;Disabled text&lt;/label&gt;
-  &lt;input type=&quot;text&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputText&quot; placeholder=&quot;Disabled text&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputSearch&quot;&gt;Disabled search&lt;/label&gt;
-  &lt;input type=&quot;search&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputSearch&quot; placeholder=&quot;Disabled search&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputTel&quot;&gt;Disabled telephone&lt;/label&gt;
-  &lt;input type=&quot;text&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputTel&quot; placeholder=&quot;Disabled telephone&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputURL&quot;&gt;Disabled URL&lt;/label&gt;
-  &lt;input type=&quot;url&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputURL&quot; placeholder=&quot;Disabled URL&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputEmail&quot;&gt;Disabled email address&lt;/label&gt;
-  &lt;input type=&quot;email&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputEmail&quot; placeholder=&quot;Disabled email&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputPassword&quot;&gt;Disabled password&lt;/label&gt;
-  &lt;input type=&quot;password&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputPassword&quot; placeholder=&quot;Disabled password&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputDate&quot;&gt;Disabled date&lt;/label&gt;
-  &lt;input type=&quot;date&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputDate&quot; placeholder=&quot;Disabled date&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputTime&quot;&gt;Disabled time&lt;/label&gt;
-  &lt;input type=&quot;time&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputTime&quot; placeholder=&quot;Disabled time&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputNumber&quot;&gt;Disabled number&lt;/label&gt;
-  &lt;input type=&quot;number&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputNumber&quot; placeholder=&quot;Disabled number&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputRange&quot;&gt;Disabled range&lt;/label&gt;
-  &lt;input type=&quot;range&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputRange&quot; placeholder=&quot;Disabled range&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputColor&quot;&gt;Disabled color&lt;/label&gt;
-  &lt;input type=&quot;color&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputColor&quot; placeholder=&quot;Disabled color&quot;&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;label for=&quot;inputFile&quot;&gt;Disabled file input&lt;/label&gt;
-  &lt;input type=&quot;file&quot; class=&quot;{{modifier_class}}&quot; disabled id=&quot;inputFile&quot;&gt;
-&lt;/div&gt;
-</code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputText"</span>&gt;</span>Disabled text<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputText"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled text"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputSearch"</span>&gt;</span>Disabled search<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputSearch"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled search"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputTel"</span>&gt;</span>Disabled telephone<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputTel"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled telephone"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputURL"</span>&gt;</span>Disabled URL<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"url"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputURL"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled URL"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputEmail"</span>&gt;</span>Disabled email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputEmail"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled email"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputPassword"</span>&gt;</span>Disabled password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputPassword"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled password"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputDate"</span>&gt;</span>Disabled date<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputDate"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled date"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputTime"</span>&gt;</span>Disabled time<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"time"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputTime"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled time"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputNumber"</span>&gt;</span>Disabled number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputNumber"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled number"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputRange"</span>&gt;</span>Disabled range<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputRange"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled range"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputColor"</span>&gt;</span>Disabled color<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"color"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputColor"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Disabled color"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputFile"</span>&gt;</span>Disabled file input<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputFile"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
-          Source: <code>base/forms/_forms.scss</code>, line 116
+          Source: <code>base/forms/_forms.scss</code>, line 106
         </div>
           </div>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

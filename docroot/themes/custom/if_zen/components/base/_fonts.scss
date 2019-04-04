@@ -22,8 +22,7 @@
 // can add them to the font variables in the _init.scss partial.
 
 // @font-face {
-//   font-family: 'Example';
-//   src: url('../fonts/example.eot');
+//   font-family: 'Example';  src: url('../fonts/example.eot');
 //   src: url('../fonts/example.eot?iefix') format('eot'),
 //     url('../fonts/example.woff') format('woff'),
 //     url('../fonts/example.ttf') format('truetype'),
@@ -31,3 +30,5 @@
 //   font-weight: normal;
 //   font-style: normal;
 // }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Open+Sans+Condensed:700');

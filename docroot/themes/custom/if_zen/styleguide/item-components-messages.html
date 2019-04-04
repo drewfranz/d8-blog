@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -95,7 +95,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-components-messages" class="kss-section kss-section--depth-2 is-fullscreen">
@@ -115,7 +116,7 @@
                   <p class="kss-toolbar">
                         <a href="#kssref-components-messages" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -136,7 +137,7 @@
             </a>
             <a href="#kssref-components-messages" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -150,6 +151,7 @@ should use the <code>.messages--error</code> class.</p>
 <p>The icon shown is not part of the CSS; it is an SVG image in the HTML.</p>
 
           </div>
+        
         
               </div>
 
@@ -305,7 +307,7 @@ should use the <code>.messages--error</code> class.</p>
             <summary>
                               Markup: <code>components/messages/messages.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">{#
+            <pre class="hljs"><code class="language-twig"><span class="xml"></span><span class="hljs-comment">{#
 /**
  * @file
  * Component for messages.
@@ -317,48 +319,48 @@ should use the <code>.messages--error</code> class.</p>
  * - type: [string] The type of message: error, warning or status (default).
  * - messages: [array] The messages. Each item in the array is a string.
  */
-#}
-{{ attach_library(&#039;if_zen/messages&#039;) }}
-&lt;div class=&quot;messages {{ modifier_class }}&quot; role=&quot;contentinfo&quot; {% if heading %}aria-label=&quot;{{ heading }}&quot;{% endif %} {{ attributes }}&gt;
-  {% if type == &#039;error&#039; %}
-    &lt;div role=&quot;alert&quot;&gt;
-  {% endif %}
+#}</span><span class="xml">
+</span><span class="hljs-template-variable">{{ attach_library('if_zen/messages') }}</span><span class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages </span></span></span><span class="hljs-template-variable">{{ modifier_class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span> </span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> heading %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">aria-label</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ heading }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag"> </span></span><span class="hljs-template-variable">{{ attributes }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == 'error' %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
 
-  {% block heading %}
-    {% if heading %}
-      &lt;h2 class=&quot;visually-hidden&quot;&gt;{{ heading }}&lt;/h2&gt;
-    {% endif %}
-  {% endblock heading %}
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> heading %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> heading %}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visually-hidden"</span>&gt;</span></span><span class="hljs-template-variable">{{ heading }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> heading %}</span><span class="xml">
 
-  {% block icon %}
-    &lt;div class=&quot;messages__icon&quot;&gt;
-      {% if type == &#039;error&#039; %}
-        {% include &quot;@if_zen/components/messages/messages-icon-error.svg&quot; %}
-      {% elseif type == &#039;warning&#039; %}
-        {% include &quot;@if_zen/components/messages/messages-icon-warning.svg&quot; %}
-      {% else %}
-        {% include &quot;@if_zen/components/messages/messages-icon-status.svg&quot; %}
-      {% endif %}
-    &lt;/div&gt;
-  {% endblock icon %}
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> icon %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages__icon"</span>&gt;</span>
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == 'error' %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "@if_zen/components/messages/messages-icon-error.svg" %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> type == 'warning' %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "@if_zen/components/messages/messages-icon-warning.svg" %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">include</span></span> "@if_zen/components/messages/messages-icon-status.svg" %}</span><span class="xml">
+      </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> icon %}</span><span class="xml">
 
-  {% block content %}
-    {% if messages|length &gt; 1 %}
-      &lt;ul class=&quot;messages__list&quot;&gt;
-        {% for message in messages %}
-          &lt;li class=&quot;messages__item&quot;&gt;{{ message }}&lt;/li&gt;
-        {% endfor %}
-      &lt;/ul&gt;
-    {% else %}
-      {{ messages|first }}
-    {% endif %}
-  {% endblock content %}
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">block</span></span> content %}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> messages|<span class="hljs-keyword">length</span> &gt; 1 %}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages__list"</span>&gt;</span>
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> message in messages %}</span><span class="xml">
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"messages__item"</span>&gt;</span></span><span class="hljs-template-variable">{{ message }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
+      </span><span class="hljs-template-variable">{{ messages|<span class="hljs-keyword">first</span> }}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endblock</span></span> content %}</span><span class="xml">
 
-  {% if type == &#039;error&#039; %}
-    &lt;/div&gt;
-  {% endif %}
-&lt;/div&gt;
-</code></pre>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> type == 'error' %}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -366,16 +368,15 @@ should use the <code>.messages--error</code> class.</p>
         </div>
           </div>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'

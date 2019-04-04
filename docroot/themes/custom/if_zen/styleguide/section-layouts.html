@@ -54,7 +54,7 @@
   <header class="kss-header">
     <h1 class="kss-doc-title">if_zen Style Guide</h1>
   </header>
-  <nav class="kss-nav">
+  <nav class="kss-nav" aria-label="Style Guide">
     <ul class="kss-nav__menu">
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="./">
@@ -115,7 +115,8 @@
         </ul>
   </nav>
 </div>
-<article role="main" class="kss-main">
+<main class="kss-main" aria-label="content">
+<article>
 
   
           <div id="kssref-layouts" class="kss-section kss-section--depth-1 ">
@@ -138,6 +139,7 @@
 theme.</p>
 
           </div>
+        
         
               </div>
 
@@ -163,16 +165,16 @@ theme.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-layouts-layout-center" data-kss-fullscreen="kssref-layouts-layout-center">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-layouts-layout-center.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -183,7 +185,7 @@ theme.</p>
               </a>
                         <a href="#kssref-layouts-layout-center" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -204,7 +206,7 @@ theme.</p>
             </a>
             <a href="#kssref-layouts-layout-center" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -215,12 +217,13 @@ theme.</p>
             <p>All other layouts should be nested inside this centered layout to ensure that
 content does not get too wide on very large screens.</p>
 <p>Applying a <code>.layout-*</code> class to the same HTML element as <code>.layout-center</code>
-would cause that element&#39;s grid to mis-align with the rest of the grid on the
+would cause that element's grid to mis-align with the rest of the grid on the
 page, but this component will automatically detect the other <code>.layout-*</code>
 class and automatically use the <code>.layout-center--shared-grid</code> variant
 instead.</p>
 
           </div>
+        
         
               </div>
 
@@ -244,7 +247,7 @@ instead.</p>
               .layout-center--shared-grid
             </div>
             <div class="kss-modifier__description kss-style">
-              If <code>.layout-center</code> is applied to the same div as another .layout-<em> class, then this variant should be used to prevent the shared layout&#39;s grid from mis-aligning. Note: Each time a new .layout-</em> component is created, this component will need to be modified.
+              If <code>.layout-center</code> is applied to the same div as another .layout-* class, then this variant should be used to prevent the shared layout's grid from mis-aligning. Note: Each time a new .layout-* component is created, this component will need to be modified.
             </div>
             <div class="kss-modifier__example">
               <div class="layout-center layout-center--shared-grid">
@@ -258,10 +261,10 @@ instead.</p>
             <summary>
                               Markup: <code>layouts/layout-center/layout-center.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;layout-center {{modifier_class}}&quot;&gt;
-  {{ content }}
-&lt;/div&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-center </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{ content }}</span><span class="xml">
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -285,16 +288,16 @@ instead.</p>
                   <p class="kss-toolbar">
                           <a href="#kssref-layouts-layout-3col" data-kss-fullscreen="kssref-layouts-layout-3col">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-layouts-layout-3col.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -305,7 +308,7 @@ instead.</p>
               </a>
                         <a href="#kssref-layouts-layout-3col" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -326,7 +329,7 @@ instead.</p>
             </a>
             <a href="#kssref-layouts-layout-3col" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -375,12 +378,13 @@ second like <code>__col-2</code>, etc.</li>
 <ol>
 <li>Place a grid container div inside a grid item. Just apply the normal
 classes to the nested grid container and its grid items.</li>
-<li>The grid item&#39;s div is also the grid container for the nested grid. In
+<li>The grid item's div is also the grid container for the nested grid. In
 this case, the <code>.layout3-col__grid-item-container</code> class should be added
 to the div to ensure its nested grid items align with the parent grid.</li>
 </ol>
 
           </div>
+        
         
               </div>
 
@@ -457,65 +461,65 @@ to the div to ensure its nested grid items align with the parent grid.</li>
             <summary>
                               Markup: <code>layouts/layout-3col/layout-3col.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;layout-3col {{modifier_class}}&quot;&gt;
-  &lt;div class=&quot;layout-3col__full&quot;&gt;
-    The &lt;code&gt;.layout-3col__full&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__left-content&quot;&gt;
-    The &lt;code&gt;.layout-3col__left-content&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__right-sidebar&quot;&gt;
-    The &lt;code&gt;.layout-3col__right-sidebar&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__right-content&quot;&gt;
-    The &lt;code&gt;.layout-3col__right-content&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__left-sidebar&quot;&gt;
-    The &lt;code&gt;.layout-3col__left-sidebar&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__right-content&quot;&gt;
-    The &lt;code&gt;.layout-3col__right-content&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__first-left-sidebar&quot;&gt;
-    The &lt;code&gt;.layout-3col__first-left-sidebar&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__second-left-sidebar&quot;&gt;
-    The &lt;code&gt;.layout-3col__second-left-sidebar&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__col-1&quot;&gt;
-    The &lt;code&gt;.layout-3col__col-1&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__col-2&quot;&gt;
-    The &lt;code&gt;.layout-3col__col-2&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__col-3&quot;&gt;
-    The &lt;code&gt;.layout-3col__col-3&lt;/code&gt; grid item. Don&#039;t forget to look for the &lt;code&gt;.layout-3col__col-4&lt;/code&gt; grid item at tablet sizes.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__col-4&quot;&gt;
-    The &lt;code&gt;.layout-3col__col-4&lt;/code&gt; grid item.
-  &lt;/div&gt;
-  &lt;div class=&quot;layout-3col__full layout-3col__grid-item-container&quot;&gt;
-    &lt;div class=&quot;layout-3col__col-x&quot;&gt;
-      The first &lt;code&gt;.layout-3col__col-x&lt;/code&gt; grid item in this nested grid.
-    &lt;/div&gt;
-    &lt;div class=&quot;layout-3col__col-x&quot;&gt;
-      The second &lt;code&gt;.layout-3col__col-x&lt;/code&gt; grid item in this nested grid.
-    &lt;/div&gt;
-    &lt;div class=&quot;layout-3col__col-x&quot;&gt;
-      The third &lt;code&gt;.layout-3col__col-x&lt;/code&gt; grid item in this nested grid.
-    &lt;/div&gt;
-    &lt;div class=&quot;layout-3col__col-x&quot;&gt;
-      The fourth &lt;code&gt;.layout-3col__col-x&lt;/code&gt; grid item in this nested grid.
-    &lt;/div&gt;
-    &lt;div class=&quot;layout-3col__col-x&quot;&gt;
-      The fifth &lt;code&gt;.layout-3col__col-x&lt;/code&gt; grid item in this nested grid.
-    &lt;/div&gt;
-    &lt;div class=&quot;layout-3col__col-x&quot;&gt;
-      The sixth &lt;code&gt;.layout-3col__col-x&lt;/code&gt; grid item in this nested grid.
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col </span></span></span><span class="hljs-template-variable">{{modifier_class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__full"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__full<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__left-content"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__left-content<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__right-sidebar"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__right-sidebar<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__right-content"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__right-content<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__left-sidebar"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__left-sidebar<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__right-content"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__right-content<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__first-left-sidebar"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__first-left-sidebar<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__second-left-sidebar"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__second-left-sidebar<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-1"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-1<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-2"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-2<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-3"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-3<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item. Don't forget to look for the <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-4<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item at tablet sizes.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-4"</span>&gt;</span>
+    The <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-4<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__full layout-3col__grid-item-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-x"</span>&gt;</span>
+      The first <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-x<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item in this nested grid.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-x"</span>&gt;</span>
+      The second <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-x<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item in this nested grid.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-x"</span>&gt;</span>
+      The third <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-x<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item in this nested grid.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-x"</span>&gt;</span>
+      The fourth <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-x<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item in this nested grid.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-x"</span>&gt;</span>
+      The fifth <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-x<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item in this nested grid.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-3col__col-x"</span>&gt;</span>
+      The sixth <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>.layout-3col__col-x<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> grid item in this nested grid.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -539,16 +543,16 @@ to the div to ensure its nested grid items align with the parent grid.</li>
                   <p class="kss-toolbar">
                           <a href="#kssref-layouts-layout-swap" data-kss-fullscreen="kssref-layouts-layout-swap">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
-                <svg class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
-                <svg class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
               <a href="item-layouts-layout-swap.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
                   <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
                   <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
@@ -559,7 +563,7 @@ to the div to ensure its nested grid items align with the parent grid.</li>
               </a>
                         <a href="#kssref-layouts-layout-swap" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
                 <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
@@ -580,7 +584,7 @@ to the div to ensure its nested grid items align with the parent grid.</li>
             </a>
             <a href="#kssref-layouts-layout-swap" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
                 <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
               </svg>
@@ -593,6 +597,7 @@ swap places in the visual order while maintaining their original HTML source
 order.</p>
 
           </div>
+        
         
               </div>
 
@@ -615,11 +620,11 @@ order.</p>
             <summary>
                               Markup: <code>layouts/layout-swap/layout-swap.twig</code>
                           </summary>
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;layout-swap&quot;&gt;
-  &lt;div&gt;This element comes &lt;strong&gt;first&lt;/strong&gt; in the HTML source order.&lt;/div&gt;
-  &lt;div class=&quot;layout-swap__top&quot;&gt;This element comes &lt;strong&gt;second&lt;/strong&gt; in the HTML source order.&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-swap"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>This element comes <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>first<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> in the HTML source order.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"layout-swap__top"</span>&gt;</span>This element comes <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>second<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> in the HTML source order.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
           </details>
               
               <div class="kss-source kss-style">
@@ -627,16 +632,15 @@ order.</p>
         </div>
           </section>
   </article>
+</main>
 
 <!-- SCRIPTS -->
 <script src="kss-assets/kss.js"></script>
 <script src="kss-assets/scrollspy.js"></script>
-<script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/kss-fullscreen.js"></script>
 <script src="kss-assets/kss-guides.js"></script>
 <script src="kss-assets/kss-markup.js"></script>
 <script>
-  prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
     nav: '.kss-nav__menu-child > li > a',
     className: 'is-in-viewport'
