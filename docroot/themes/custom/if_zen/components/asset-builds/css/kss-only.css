@@ -3,14 +3,14 @@
 }
 
 #kssref-layouts-layout-3column .kss-modifier__example {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 @media (min-width: 736px) {
   #kssref-layouts-layout-3column .kss-modifier__example {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 

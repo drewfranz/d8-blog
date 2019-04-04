@@ -157,7 +157,7 @@ $zen-box-sizing: universal-border-box;
 // First we set the values we need for the mobile version of our layouts (the
 // version that does _not_ appear inside any @media queries.)
 $zen-columns: 1;
-$zen-gutters: 40px;
+$zen-gutters: 10px;
 
 // Then we set the values we need for each of the layouts at larger media query
 // sizes. Note how the names of the layouts match the names of our breakpoints
